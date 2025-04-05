@@ -1,0 +1,929 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(to bottom right, var(--primaryColor) 35%, var(--blackColor) 100%) no-repeat center center fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  max-width: 100vw;
+}
+
+:root {
+  --primaryColor: #003b6d;
+  --secondaryColor: #bdbdbd;
+  --tertiaryColor: #f5f5f5;
+  --quaternaryColor: #000080;
+  --whiteColor: #ffffff;
+  --blackColor: #000000;
+  --greyColor: #808080;
+  --bgColor: #f5f5f5;
+  --inputColor: #333;
+  --inputColorLight: #666;
+  --linkColor: #0000ff;
+  --biggestFontSize: 2.5rem;
+  --h1FontSize: 1.5rem;
+  --h2FontSize: 1.25rem;
+  --h3FontSize: 1rem;
+  --normalFontSize: 0.938rem;
+  --smallFontSize: 0.813rem;
+  --smallerFontSize: 0.75rem;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  align-items: center;
+}
+
+html {
+  font-size: 90%;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+icon {
+  font-size: var(--h2FontSize);
+  cursor: pointer;
+}
+
+img,
+video {
+  width: 100%;
+  height: auto;
+}
+
+.message {
+  display: none;
+}
+
+.showMessage {
+  display: block;
+  color: var(--whiteColor);
+  background: var(--primaryColor);
+  border-radius: 3.5px;
+  text-align: center;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 20px;
+  padding: 10px 15px;
+  border: 1px solid transparent;
+  background-color: var(--primaryColor);
+  color: var(--whiteColor);
+  transition: 0.35s ease-in-out;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.35);
+}
+
+.btn icon {
+  margin-left: 5px;
+  transition: 0.35s ease-in-out;
+}
+
+.btn:hover {
+  background: var(--secondaryColor);
+  color: var(--primaryColor);
+  border: 1px solid var(--primaryColor);
+  transition: 0.35s ease-in-out;
+}
+
+.link {
+  color: var(--primaryColor);
+  text-decoration: none;
+  font-weight: 555;
+  transition: 0.35s ease-in-out;
+}
+
+.link:hover {
+  color: var(--linkColor);
+  text-decoration: underline;
+  transition: 0.35s ease-in-out;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  font-weight: 555;
+}
+
+.success {
+  color: green;
+  font-size: 12px;
+  font-weight: 555;
+}
+
+.loginPage,
+.registerPage,
+.customerRegistrationPage {
+  height: 100vh;
+  width: 100vw;
+  margin: auto;
+  overflow: hidden;
+}
+.loginPage .container,
+.registerPage .container,
+.customerRegistrationPage .container {
+  height: 100vh;
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+  justify-content: space-between;
+  background-color: var(--whiteColor);
+}
+.loginPage .container .loginBGDiv,
+.registerPage .container .loginBGDiv,
+.customerRegistrationPage .container .loginBGDiv {
+  position: relative;
+  display: flex;
+  flex-basis: 70%;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+.loginPage .container .loginBGDiv img,
+.registerPage .container .loginBGDiv img,
+.customerRegistrationPage .container .loginBGDiv img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.loginPage .container .loginBGDiv .loginBGText,
+.registerPage .container .loginBGDiv .loginBGText,
+.customerRegistrationPage .container .loginBGDiv .loginBGText {
+  position: relative;
+}
+.loginPage .container .loginBGDiv .loginBGText .loginBGHeading,
+.registerPage .container .loginBGDiv .loginBGText .loginBGHeading,
+.customerRegistrationPage .container .loginBGDiv .loginBGText .loginBGHeading {
+  color: var(--whiteColor);
+  font-size: 35px;
+  font-weight: 800;
+}
+.loginPage .container .loginBGDiv .loginBGText p,
+.registerPage .container .loginBGDiv .loginBGText p,
+.customerRegistrationPage .container .loginBGDiv .loginBGText p {
+  color: var(--whiteColor);
+  padding: 1rem;
+  font-size: 20px;
+  font-weight: 200;
+}
+.loginPage .container .loginBGDiv .steps,
+.registerPage .container .loginBGDiv .steps,
+.customerRegistrationPage .container .loginBGDiv .steps {
+  position: relative;
+}
+.loginPage .container .loginBGDiv .steps h2,
+.registerPage .container .loginBGDiv .steps h2,
+.customerRegistrationPage .container .loginBGDiv .steps h2 {
+  color: white;
+  font-size: 35px;
+  text-align: start;
+  margin-left: 55px;
+}
+.loginPage .container .loginBGDiv .steps .step,
+.registerPage .container .loginBGDiv .steps .step,
+.customerRegistrationPage .container .loginBGDiv .steps .step {
+  width: 55%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: start;
+  gap: 3.5rem;
+  margin: 3.5rem;
+  background-color: hsla(0deg, 0%, 100%, 0.35);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 35px 20px;
+  border-radius: 12px;
+  border: 2px outset rgba(255, 255, 255, 0.55);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.35);
+}
+.loginPage .container .loginBGDiv .steps .step .stepBullet,
+.registerPage .container .loginBGDiv .steps .step .stepBullet,
+.customerRegistrationPage .container .loginBGDiv .steps .step .stepBullet {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+.loginPage .container .loginBGDiv .steps .step .stepBullet .stepIcon,
+.registerPage .container .loginBGDiv .steps .step .stepBullet .stepIcon,
+.customerRegistrationPage .container .loginBGDiv .steps .step .stepBullet .stepIcon {
+  color: white;
+  height: 20px;
+  width: 20px;
+}
+.loginPage .container .loginBGDiv .steps .step .stepText,
+.registerPage .container .loginBGDiv .steps .step .stepText,
+.customerRegistrationPage .container .loginBGDiv .steps .step .stepText {
+  color: white;
+}
+.loginPage .container .loginBGDiv .steps .step .stepText p,
+.registerPage .container .loginBGDiv .steps .step .stepText p,
+.customerRegistrationPage .container .loginBGDiv .steps .step .stepText p {
+  font-size: 12px;
+  font-weight: 200;
+}
+.loginPage .container .loginBGDiv .steps .step .stepText h4,
+.registerPage .container .loginBGDiv .steps .step .stepText h4,
+.customerRegistrationPage .container .loginBGDiv .steps .step .stepText h4 {
+  font-size: 15px;
+  font-weight: 700;
+}
+.loginPage .container .loginBGDiv .steps .step:hover,
+.registerPage .container .loginBGDiv .steps .step:hover,
+.customerRegistrationPage .container .loginBGDiv .steps .step:hover {
+  background-color: hsla(0deg, 0%, 100%, 0.55);
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+  border: 8px solid var(--primaryColor);
+}
+.loginPage .container .formDiv,
+.registerPage .container .formDiv,
+.customerRegistrationPage .container .formDiv {
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  flex-direction: column;
+  gap: 0.5rem;
+  transform: translateY(-1rem);
+}
+.loginPage .container .formDiv .headerDiv,
+.registerPage .container .formDiv .headerDiv,
+.customerRegistrationPage .container .formDiv .headerDiv {
+  text-align: center;
+  padding: 0.5rem 0;
+}
+.loginPage .container .formDiv .headerDiv .logo,
+.registerPage .container .formDiv .headerDiv .logo,
+.customerRegistrationPage .container .formDiv .headerDiv .logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.loginPage .container .formDiv .headerDiv .logo img,
+.registerPage .container .formDiv .headerDiv .logo img,
+.customerRegistrationPage .container .formDiv .headerDiv .logo img {
+  height: 100px;
+  width: 100px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  padding-bottom: 0.5rem;
+}
+.loginPage .container .formDiv .headerDiv .logo h4,
+.registerPage .container .formDiv .headerDiv .logo h4,
+.customerRegistrationPage .container .formDiv .headerDiv .logo h4 {
+  font-size: 20px;
+  color: var(--primaryColor);
+  font-weight: 800;
+  margin-top: -12px;
+}
+.loginPage .container .formDiv .headerDiv .logo p,
+.registerPage .container .formDiv .headerDiv .logo p,
+.customerRegistrationPage .container .formDiv .headerDiv .logo p {
+  font-size: 10px;
+  color: var(--secondaryColor);
+  font-weight: 500;
+  margin-top: -8px;
+  padding-bottom: 2px;
+  -webkit-text-stroke: 0.35px var(--primaryColor);
+}
+.loginPage .container .formDiv .headerDiv h3,
+.registerPage .container .formDiv .headerDiv h3,
+.customerRegistrationPage .container .formDiv .headerDiv h3 {
+  font-size: 35px;
+  color: var(--primaryColor);
+  font-weight: 700;
+}
+.loginPage .container .formDiv .form,
+.registerPage .container .formDiv .form,
+.customerRegistrationPage .container .formDiv .form {
+  gap: 0.5rem;
+}
+.loginPage .container .formDiv .form h2,
+.registerPage .container .formDiv .form h2,
+.customerRegistrationPage .container .formDiv .form h2 {
+  font-size: 22px;
+  color: var(--primaryColor);
+  font-weight: 700;
+}
+.loginPage .container .formDiv .form .input,
+.registerPage .container .formDiv .form .input,
+.customerRegistrationPage .container .formDiv .form .input {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+  transition: 0.35s ease-in-out;
+}
+.loginPage .container .formDiv .form .input label,
+.registerPage .container .formDiv .form .input label,
+.customerRegistrationPage .container .formDiv .form .input label {
+  position: absolute;
+  top: 50%;
+  left: 35px;
+  transform: translateY(-50%);
+  color: var(--inputColorLight);
+  font-size: 13.5px;
+  font-weight: 555;
+  transition: 0.35s ease-in-out;
+  pointer-events: none;
+  opacity: 0;
+}
+.loginPage .container .formDiv .form .input .icon,
+.registerPage .container .formDiv .form .input .icon,
+.customerRegistrationPage .container .formDiv .form .input .icon {
+  position: absolute;
+  font-size: 20px;
+  color: var(--inputColorLight);
+  transition: 0.35s ease-in-out;
+  left: 10px;
+}
+.loginPage .container .formDiv .form .input .eye,
+.registerPage .container .formDiv .form .input .eye,
+.customerRegistrationPage .container .formDiv .form .input .eye {
+  position: absolute;
+  font-size: 20px;
+  color: var(--inputColorLight);
+  transition: 0.35s ease-in-out;
+  right: 10px;
+}
+.loginPage .container .formDiv .form .input:hover .icon,
+.registerPage .container .formDiv .form .input:hover .icon,
+.customerRegistrationPage .container .formDiv .form .input:hover .icon {
+  color: var(--primaryColor);
+  transition: 0.35s ease-in-out;
+}
+.loginPage .container .formDiv .form .input #inputField,
+.registerPage .container .formDiv .form .input #inputField,
+.customerRegistrationPage .container .formDiv .form .input #inputField {
+  font-weight: 555;
+  font-size: 12px;
+  padding: 1rem 3.5rem;
+  color: var(--inputColor);
+  border: 2px solid var(--secondaryColor);
+  border-radius: 20px;
+  transition: all 0.35s ease-in-out;
+  background-color: transparent;
+  outline: none;
+  width: 350px;
+}
+.loginPage .container .formDiv .form .input #inputField::-moz-placeholder, .registerPage .container .formDiv .form .input #inputField::-moz-placeholder, .customerRegistrationPage .container .formDiv .form .input #inputField::-moz-placeholder {
+  opacity: 1;
+  -moz-transition: 0.55s ease-in-out;
+  transition: 0.55s ease-in-out;
+  font-size: 13.5px;
+}
+.loginPage .container .formDiv .form .input #inputField::placeholder,
+.registerPage .container .formDiv .form .input #inputField::placeholder,
+.customerRegistrationPage .container .formDiv .form .input #inputField::placeholder {
+  opacity: 1;
+  transition: 0.55s ease-in-out;
+  font-size: 13.5px;
+}
+.loginPage .container .formDiv .form .input #inputField:hover,
+.registerPage .container .formDiv .form .input #inputField:hover,
+.customerRegistrationPage .container .formDiv .form .input #inputField:hover {
+  border: 2px solid var(--primaryColor);
+  color: var(--primaryColor);
+  transition: 0.35s ease-in-out;
+}
+.loginPage .container .formDiv .form .input #inputField:hover ~ label,
+.loginPage .container .formDiv .form .input #inputField:hover ~ .eye,
+.registerPage .container .formDiv .form .input #inputField:hover ~ label,
+.registerPage .container .formDiv .form .input #inputField:hover ~ .eye,
+.customerRegistrationPage .container .formDiv .form .input #inputField:hover ~ label,
+.customerRegistrationPage .container .formDiv .form .input #inputField:hover ~ .eye {
+  color: var(--primaryColor);
+  transition: 0.35s ease-in-out;
+}
+.loginPage .container .formDiv .form .input #inputField:hover::-moz-placeholder, .registerPage .container .formDiv .form .input #inputField:hover::-moz-placeholder, .customerRegistrationPage .container .formDiv .form .input #inputField:hover::-moz-placeholder {
+  color: var(--primaryColor);
+  -moz-transition: 0.55s ease-in-out;
+  transition: 0.55s ease-in-out;
+}
+.loginPage .container .formDiv .form .input #inputField:hover::placeholder,
+.registerPage .container .formDiv .form .input #inputField:hover::placeholder,
+.customerRegistrationPage .container .formDiv .form .input #inputField:hover::placeholder {
+  color: var(--primaryColor);
+  transition: 0.55s ease-in-out;
+}
+.loginPage .container .formDiv .form .input #inputField:focus ~ label,
+.loginPage .container .formDiv .form .input #inputField :valid ~ label,
+.registerPage .container .formDiv .form .input #inputField:focus ~ label,
+.registerPage .container .formDiv .form .input #inputField :valid ~ label,
+.customerRegistrationPage .container .formDiv .form .input #inputField:focus ~ label,
+.customerRegistrationPage .container .formDiv .form .input #inputField :valid ~ label {
+  top: 0;
+  left: 20px;
+  color: var(--primaryColor);
+  font-size: 11px;
+  transition: 0.35s ease-in-out;
+  background-color: var(--whiteColor);
+  padding: 0 5px;
+  opacity: 1;
+}
+.loginPage .container .formDiv .form .input #inputField:focus-visible,
+.registerPage .container .formDiv .form .input #inputField:focus-visible,
+.customerRegistrationPage .container .formDiv .form .input #inputField:focus-visible {
+  border-color: var(--primaryColor);
+  color: var(--primaryColor);
+  font-weight: 555;
+  transition: 0.35s ease-in-out;
+}
+.loginPage .container .formDiv .form .input #inputField:focus-visible::-moz-placeholder, .registerPage .container .formDiv .form .input #inputField:focus-visible::-moz-placeholder, .customerRegistrationPage .container .formDiv .form .input #inputField:focus-visible::-moz-placeholder {
+  opacity: 0;
+  -moz-transition: 0.55s ease-in-out;
+  transition: 0.55s ease-in-out;
+  color: var(--inputColorLight);
+  font-size: 12px;
+}
+.loginPage .container .formDiv .form .input #inputField:focus-visible::placeholder,
+.registerPage .container .formDiv .form .input #inputField:focus-visible::placeholder,
+.customerRegistrationPage .container .formDiv .form .input #inputField:focus-visible::placeholder {
+  opacity: 0;
+  transition: 0.55s ease-in-out;
+  color: var(--inputColorLight);
+  font-size: 12px;
+}
+.loginPage .container .formDiv .form .rememberForgot,
+.registerPage .container .formDiv .form .rememberForgot,
+.customerRegistrationPage .container .formDiv .form .rememberForgot {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  margin: -8px 5.5px 2px 5.5px;
+  transition: 0.35s ease-in-out;
+}
+.loginPage .container .formDiv .form .rememberForgot label,
+.registerPage .container .formDiv .form .rememberForgot label,
+.customerRegistrationPage .container .formDiv .form .rememberForgot label {
+  font-weight: 555;
+  transition: 0.35s ease-in-out;
+}
+.loginPage .container .formDiv .form .rememberForgot label input,
+.registerPage .container .formDiv .form .rememberForgot label input,
+.customerRegistrationPage .container .formDiv .form .rememberForgot label input {
+  accent-color: var(--primaryColor);
+  margin-right: 5px;
+  transition: 0.35s ease-in-out;
+}
+.loginPage .container .formDiv .form .rememberForgot label a,
+.registerPage .container .formDiv .form .rememberForgot label a,
+.customerRegistrationPage .container .formDiv .form .rememberForgot label a {
+  color: var(--primaryColor);
+  text-decoration: none;
+  opacity: 0.2;
+  transition: 0.35s ease-in-out;
+}
+.loginPage .container .formDiv .form .rememberForgot label a:hover,
+.registerPage .container .formDiv .form .rememberForgot label a:hover,
+.customerRegistrationPage .container .formDiv .form .rememberForgot label a:hover {
+  color: var(--linkColor);
+  text-decoration: underline;
+  opacity: 1;
+  transition: 0.35s ease-in-out;
+}
+.loginPage .container .formDiv .form .rememberForgot a,
+.registerPage .container .formDiv .form .rememberForgot a,
+.customerRegistrationPage .container .formDiv .form .rememberForgot a {
+  color: var(--blackColor);
+  text-decoration: none;
+  transition: 0.35s ease-in-out;
+}
+.loginPage .container .formDiv .form .rememberForgot a:hover,
+.registerPage .container .formDiv .form .rememberForgot a:hover,
+.customerRegistrationPage .container .formDiv .form .rememberForgot a:hover {
+  color: var(--linkColor);
+  text-decoration: underline;
+  transition: 0.35s ease-in-out;
+}
+.loginPage .container .formDiv .form .termsConditions,
+.registerPage .container .formDiv .form .termsConditions,
+.customerRegistrationPage .container .formDiv .form .termsConditions {
+  font-size: 12px;
+  margin: 2px;
+  transition: 0.35s ease-in-out;
+  width: 300px;
+}
+.loginPage .container .formDiv .form .termsConditions label,
+.registerPage .container .formDiv .form .termsConditions label,
+.customerRegistrationPage .container .formDiv .form .termsConditions label {
+  font-weight: 555;
+  transition: 0.35s ease-in-out;
+  display: flex;
+}
+.loginPage .container .formDiv .form .termsConditions label input,
+.registerPage .container .formDiv .form .termsConditions label input,
+.customerRegistrationPage .container .formDiv .form .termsConditions label input {
+  accent-color: var(--primaryColor);
+  margin-right: 5px;
+  transition: 0.35s ease-in-out;
+}
+.loginPage .container .formDiv .form .termsConditions label span,
+.registerPage .container .formDiv .form .termsConditions label span,
+.customerRegistrationPage .container .formDiv .form .termsConditions label span {
+  transition: 0.35s ease-in-out;
+}
+.loginPage .container .formDiv .form .termsConditions label span a,
+.registerPage .container .formDiv .form .termsConditions label span a,
+.customerRegistrationPage .container .formDiv .form .termsConditions label span a {
+  color: var(--primaryColor);
+  text-decoration: none;
+  transition: 0.35s ease-in-out;
+}
+.loginPage .container .formDiv .form .termsConditions label span a:hover,
+.registerPage .container .formDiv .form .termsConditions label span a:hover,
+.customerRegistrationPage .container .formDiv .form .termsConditions label span a:hover {
+  color: var(--linkColor);
+  text-decoration: underline;
+  transition: 0.35s ease-in-out;
+}
+.loginPage .container .formDiv .form .termsConditions a,
+.registerPage .container .formDiv .form .termsConditions a,
+.customerRegistrationPage .container .formDiv .form .termsConditions a {
+  color: var(--blackColor);
+  text-decoration: none;
+  transition: 0.35s ease-in-out;
+}
+.loginPage .container .formDiv .form .termsConditions a:hover,
+.registerPage .container .formDiv .form .termsConditions a:hover,
+.customerRegistrationPage .container .formDiv .form .termsConditions a:hover {
+  color: var(--linkColor);
+  text-decoration: underline;
+  transition: 0.35s ease-in-out;
+}
+.loginPage .container .formDiv .registerLinkDiv,
+.registerPage .container .formDiv .registerLinkDiv,
+.customerRegistrationPage .container .formDiv .registerLinkDiv {
+  font-size: 12px;
+  transition: 0.35s ease-in-out;
+}
+
+.navBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 15px 50px;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  width: 100%;
+  border-bottom: 1px solid var(--secondaryColor);
+}
+.navBar .navLogo {
+  display: flex;
+  align-items: flex-end;
+  border: 2px inset var(--secondaryColor);
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  padding: 5px;
+  background-color: rgba(255, 255, 255, 0.7);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  cursor: pointer;
+  transition: transform 0.35s ease-in-out;
+}
+.navBar .navLogo:hover {
+  transform: scale(1.1);
+  transition: transform 0.35s ease-in-out;
+}
+.navBar .navLogo img {
+  height: 55px;
+  width: 55px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.navBar .navLogo .navLogoText h4 {
+  font-size: 20px;
+  color: var(--primaryColor);
+  font-weight: 800;
+  margin-top: -12px;
+}
+.navBar .navLogo .navLogoText p {
+  font-size: 10px;
+  color: var(--secondaryColor);
+  font-weight: 500;
+  margin-top: -8px;
+  padding-bottom: 2px;
+  -webkit-text-stroke: 0.35px var(--primaryColor);
+}
+.navBar .navLinks {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.navBar .navLinks .menuBar {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.navBar .navLinks .menuBar li {
+  color: var(--whiteColor);
+  height: 55px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: all 0.35s ease-in-out;
+  padding: 10px 15px;
+  border-radius: 5.5px;
+  font-weight: 555;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navBar .navLinks .menuBar li a {
+  color: var(--whiteColor);
+  text-decoration: none;
+  transition: all 0.35s ease-in-out;
+  padding: 10px 15px;
+}
+.navBar .navLinks .menuBar li .chevronDown {
+  display: block;
+  font-size: 20px;
+  -webkit-animation: rotateBack 0.2s linear;
+          animation: rotateBack 0.2s linear;
+  transform: rotate(0deg);
+  transform-origin: center center;
+  transition: all 0.35s ease-in-out;
+}
+@-webkit-keyframes rotateBack {
+  from {
+    transform: rotate(180deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotateBack {
+  from {
+    transform: rotate(180deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.navBar .navLinks .menuBar li .chevronDown .arrowDown {
+  -webkit-animation-name: bounce;
+          animation-name: bounce;
+  -webkit-animation-duration: 0.35s;
+          animation-duration: 0.35s;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-timing-function: cubic-bezier(0, 0.05, 1, 0.5);
+          animation-timing-function: cubic-bezier(0, 0.05, 1, 0.5);
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+@-webkit-keyframes bounce {
+  from {
+    transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 8px, 0);
+    transform: translate3d(0, 8px, 0);
+  }
+}
+@keyframes bounce {
+  from {
+    transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 8px, 0);
+    transform: translate3d(0, 8px, 0);
+  }
+}
+.navBar .navLinks .menuBar li:hover {
+  background-color: var(--secondaryColor);
+  transition: all 0.35s ease-in-out;
+  transform: scale(1.1);
+  transition: all 0.35s ease-in-out;
+}
+.navBar .navLinks .menuBar li:hover a {
+  color: var(--primaryColor);
+  text-decoration: underline;
+  transition: all 0.35s ease-in-out;
+}
+.navBar .navLinks .menuBar li:hover .chevronDown {
+  font-size: 20px;
+  color: var(--primaryColor);
+  -webkit-animation: rotate 0.2s linear;
+          animation: rotate 0.2s linear;
+  transform: rotate(180deg);
+  transform-origin: center center;
+  transition: all 0.35s ease-in-out;
+}
+@-webkit-keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+.navBar .navLinks .navLogin {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.navBar .navLinks .navSocials {
+  display: flex;
+  gap: 8px;
+}
+.navBar .navLinks .navSocials a img {
+  height: 35px;
+  width: 35px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 8px;
+  transition: all 0.35s ease-in-out;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.35);
+  border: 2px solid var(--secondaryColor);
+}
+.navBar .navLinks .navSocials a img:hover {
+  transform: scale(1.1);
+  transition: all 0.35s ease-in-out;
+}
+
+footer {
+  padding: 1rem 0;
+  background-color: var(--blackColor);
+  color: var(--whiteColor);
+  text-align: start;
+}
+footer .footerContainer {
+  margin: 50px;
+}
+footer .footerContainer .footerContent {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  justify-content: space-between;
+  align-items: start;
+  gap: 5.5rem;
+}
+footer .footerContainer .footerContent .footerList h3 {
+  font-size: var(--h2FontSize);
+  color: var(--whiteColor);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+footer .footerContainer .footerContent .footerList p {
+  font-size: var(--normalFontSize);
+  color: var(--whiteColor);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+footer .footerContainer .footerContent .footerList img {
+  height: 20px;
+  width: 20px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 8px;
+  transition: all 0.35s ease-in-out;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.35);
+  border: 2px solid var(--secondaryColor);
+  margin-bottom: 12px;
+}
+footer .footerContainer .footerContent .footerList img:hover {
+  transform: scale(1.2);
+  transition: all 0.35s ease-in-out;
+}
+footer .footerContainer .footerContent .footerList .footerContact {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+footer .footerContainer .footerBottom {
+  margin-top: 50px;
+  text-align: center;
+  font-size: var(--smallerFontSize);
+  color: var(--whiteColor);
+  font-weight: 500;
+  padding: 1rem 0 0 0;
+  border-top: 1px solid var(--secondaryColor);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
+footer .footerContainer .footerBottom p {
+  margin-top: 0.5rem;
+}
+footer .footerContainer .footerBottom a {
+  color: var(--whiteColor);
+  text-decoration: none;
+  transition: all 0.35s ease-in-out;
+}
+footer .footerContainer .footerBottom a:hover {
+  color: var(--primaryColor);
+  text-decoration: underline;
+  transition: all 0.35s ease-in-out;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--secondaryColor);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primaryColor);
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--whiteColor);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: var(--primaryColor);
+}
+
+::-webkit-scrollbar-corner {
+  background: var(--secondaryColor);
+}
+
+::-webkit-scrollbar-button {
+  background: var(--secondaryColor);
+}
+
+::-webkit-scrollbar-corner:hover {
+  background: var(--primaryColor);
+}
+
+::-webkit-scrollbar-button:hover {
+  background: var(--whiteColor);
+}
+
+::-webkit-scrollbar-button:active {
+  background: var(--primaryColor);
+}
+
+::-webkit-scrollbar-track-piece {
+  background: var(--secondaryColor);
+}
+
+::-webkit-scrollbar-track-piece:hover {
+  background: var(--whiteColor);
+}
+
+::-webkit-scrollbar-track-piece:active {
+  background: var(--primaryColor);
+}
+/*# sourceMappingURL=App.css.map */
