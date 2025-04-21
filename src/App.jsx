@@ -1,11 +1,14 @@
 import "./App.scss";
-import Dashboard from "./Components/Dashboard/Dashboard";
+import Dashboard from "./Dashboard/DashboardApp";
 import Login from "./Components/Login/Login";
 import Register from "./Components/Register/Register";
 import LandingPage from "./Components/Landing Page/LandingPage";
 import SelectDashboard from "./Components/Dashboard/Select Dashboard/SelectDashboard";
-import CustomerRegistration from "./Components/Dashboard/Select Dashboard/CustomerRegistration/CustomerInformation";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import CustomerRegistration from "./Components/Dashboard/Select Dashboard/CustomerRegistration/CustomerRegistration";
+import { createBrowserRouter, RouterProvider } from "react-router";
+import ElectricBill from "./Components/Dashboard/Select Dashboard/ElectricBill/ElectricBill";
+import DebitSummary from "./Components/Dashboard/Select Dashboard/ElectricBill/DebitSummary";
+import CreateAccount from "./Components/Dashboard/Select Dashboard/CreateAccount/CreateAccount";
 
 const router = createBrowserRouter([
   {
@@ -49,10 +52,34 @@ const router = createBrowserRouter([
     ),
   },
   {
+    path: "/DebitSummary",
+    element: (
+      <div>
+        <DebitSummary />
+      </div>
+    ),
+  },
+  {
     path: "/CustomerRegistration",
     element: (
       <div>
         <CustomerRegistration />
+      </div>
+    ),
+  },
+  {
+    path: "/ElectricBill",
+    element: (
+      <div>
+        <ElectricBill />
+      </div>
+    ),
+  },
+  {
+    path: "/CreateAccount",
+    element: (
+      <div>
+        <CreateAccount />
       </div>
     ),
   },

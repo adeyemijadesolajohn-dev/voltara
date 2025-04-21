@@ -3,8 +3,7 @@ import "./Login.css";
 import "../../App.scss";
 import loginBG from "../../LoginAssets/Login placeholder BG.png";
 import logo from "../../LoginAssets/voltara placeholder logo.png";
-import { Landing } from "react-router-dom";
-import { Reg } from "react-router-dom";
+import { Link } from "react-router";
 import { FaUsersBetweenLines } from "react-icons/fa6";
 import { SiAmazonsimpleemailservice } from "react-icons/si";
 import { TbLockPassword } from "react-icons/tb";
@@ -12,6 +11,7 @@ import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 
 const Login = () => {
   const [type, setType] = useState("password");
+
   return (
     <div className="flex loginPage">
       <div className="flex container">
@@ -26,13 +26,13 @@ const Login = () => {
 
         <div className="flex formDiv">
           <div className="headerDiv">
-            <Landing to="/LandingPage">
+            <Link to="/LandingPage">
               <div className="logo">
                 <img src={logo} alt="logo" />
                 <h4>Voltara</h4>
                 <p>Energy Solutions</p>
               </div>
-            </Landing>
+            </Link>
 
             <h3>Welcome Back</h3>
           </div>
@@ -46,7 +46,7 @@ const Login = () => {
                 <input
                   type="text"
                   id="inputField"
-                  placeholder="Company Name"
+                  placeholder="Company Ltd"
                   aria-placeholder="Company Name"
                   required
                 />
@@ -58,9 +58,9 @@ const Login = () => {
               <div className="flex input">
                 <SiAmazonsimpleemailservice className="icon" />
                 <input
-                  type="Email"
+                  type="text"
                   id="inputField"
-                  placeholder="Company Email"
+                  placeholder="abc123@email.com"
                   aria-placeholder="Company Email"
                   required
                 />
@@ -74,7 +74,7 @@ const Login = () => {
                 <input
                   type={type}
                   id="inputField"
-                  placeholder="Password"
+                  placeholder="************"
                   aria-placeholder="Password"
                   required
                 />
@@ -107,15 +107,16 @@ const Login = () => {
               </a>
             </div>
 
-            <button type="submit" className="btn">
+            <div type="submit" className="btn">
+              <button></button>
               <span>Log In</span>
-            </button>
+            </div>
 
             <div className="registerLinkDiv">
               <span className="text">Don't have an account? </span>
-              <Reg to="/Register">
+              <Link to="/Register">
                 <span className="signUp link">Register</span>
-              </Reg>
+              </Link>
             </div>
           </form>
         </div>

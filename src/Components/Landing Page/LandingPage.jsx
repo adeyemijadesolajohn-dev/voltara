@@ -1,8 +1,7 @@
 import React from "react";
 import "../../App.scss";
 import "./LandingPage.css";
-import { Signin } from "react-router-dom";
-import { Register } from "react-router-dom";
+import { Link } from "react-router";
 import navLogo from "../../LoginAssets/voltara placeholder logo.png";
 import instagram from "../../LoginAssets/icons8-instagram.gif";
 import facebook from "../../LoginAssets/icons8-facebook (1).gif";
@@ -55,12 +54,18 @@ const LandingPage = () => {
           </ul>
 
           <div className="navLogin">
-            <Signin to="/">
-              <button className="btn">Log In</button>
-            </Signin>
-            <Register to="/Register">
-              <button className="btn">Sign Up</button>
-            </Register>
+            <Link to="/">
+              <div className="btn">
+                <button></button>
+                <span>Sign In</span>
+              </div>
+            </Link>
+            <Link to="/Register">
+              <div className="btn">
+                <button></button>
+                <span>Sign Up</span>
+              </div>
+            </Link>
           </div>
 
           <div className="navSocials">
@@ -93,9 +98,7 @@ const LandingPage = () => {
           Solution
         </h1>
 
-        <div>
-          <Slider />
-        </div>
+        <div>{/* <Slider /> */}</div>
 
         <footer className="footer">
           <div className="footerContainer">

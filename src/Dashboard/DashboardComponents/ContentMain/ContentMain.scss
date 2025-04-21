@@ -1,0 +1,235 @@
+:root {
+  --primaryColor: #003b6d;
+  --secondaryColor: #bdbdbd;
+  --tertiaryColor: #f5f5f5;
+  --quaternaryColor: #000080;
+  --whiteColor: #ffffff;
+  --blackColor: #000000;
+  --greyColor: #808080;
+  --bgColor: #f5f5f5;
+  --inputColor: #333;
+  --inputColorLight: #666;
+  --linkColor: #0000ff;
+  --blueColor: #475be8;
+  --greenColor: #4ce13f;
+  --successColor: #9acd32;
+  --errorColor: #ff0000;
+  --warningColor: #ffa500;
+  --infoColor: #1e90ff;
+  --orangeColor: #f29a2e;
+  --redColor: #ef0606;
+  --yellowColor: #ffcc00;
+  --purpleColor: #800080;
+  --pinkColor: #ff69b4;
+  --lightBlueColor: #add8e6;
+  --lightGreenColor: #90ee90;
+
+  --biggestFontSize: 2.5rem;
+  --h1FontSize: 1.5rem;
+  --h2FontSize: 1.25rem;
+  --h3FontSize: 1rem;
+  --normalFontSize: 0.938rem;
+  --smallFontSize: 0.813rem;
+  --smallerFontSize: 0.75rem;
+  --smallestFontSize: 0.625rem;
+  --fontFamily: "Poppins", sans-serif;
+  --lineHeight: 1.6;
+  --fontWeight: 400;
+  --defaultTransition: all 0.35s ease-in-out;
+
+  --shadow1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --shadow2: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow3: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow4: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow5: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+
+  --borderRadius: 20px;
+  --borderRadius2: 12px;
+  --borderRadius3: 8px;
+}
+
+.mainContentHolder {
+  display: grid;
+  row-gap: 20px;
+  transition: 0.35s ease-in-out;
+}
+
+.contentGridOne {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  // grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  // width: 100%;
+  column-gap: 0.8438rem;
+  transition: 0.35s ease-in-out;
+}
+
+.midContent {
+  .midContentHolder {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    transition: 0.35s ease-in-out;
+    margin-inline: 12px;
+    // margin-top: 12px;
+
+    .midContentHeader {
+      &:first-child {
+        margin-bottom: -55px;
+        color: var(--primaryColor);
+      }
+
+      &:last-child {
+        // margin-bottom: 12px;
+      }
+    }
+  }
+}
+
+.dateRangeWrapper {
+  display: inline-block;
+  box-shadow: 0 2px 3.5px 0 rgba(0, 0, 0, 0.35),
+    0 2px 5.5px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 7px;
+
+  .rdrDateDisplay {
+    margin: 0;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    border-radius: 7px;
+    overflow: hidden;
+  }
+
+  .rdrDateRangeWrapper {
+    position: relative;
+  }
+
+  .rdrMonthAndYearWrapper {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    background-color: var(--whiteColor);
+    padding-top: 0;
+    height: 40px;
+    z-index: 1;
+  }
+
+  .rdrMonth {
+    padding: 0;
+    z-index: 1;
+  }
+
+  .rdrWeekDays {
+    position: absolute;
+    top: calc(100% + 40px);
+    left: 0;
+    width: 100%;
+    background-color: var(--whiteColor);
+    height: 32px;
+    z-index: 1;
+  }
+
+  .rdrDays {
+    position: absolute;
+    top: calc(100% + 40px + 32px);
+    left: 0;
+    width: 100%;
+    background-color: var(--whiteColor);
+    z-index: 1;
+  }
+
+  &.hide-date-range {
+    .rdrMonthAndYearWrapper {
+      display: none;
+    }
+
+    .rdrMonth {
+      padding: 0;
+    }
+
+    .rdrWeekDays,
+    .rdrDays {
+      display: none;
+    }
+  }
+
+  .rdrDateDisplayWrapper {
+    border-radius: 12px;
+  }
+
+  .rdrDateRangeWrapper {
+    background-color: var(--primaryColor);
+    border-color: var(--primaryColor);
+    outline: var(--primaryColor);
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+
+    * {
+      background-color: var(--primaryColor);
+      border-color: var(--primaryColor);
+      outline: var(--primaryColor);
+      box-shadow: none;
+      color: var(--secondaryColor);
+    }
+  }
+}
+
+.contentGridTwo {
+  display: grid;
+  grid-template-columns: 1fr, 1fr;
+  column-gap: 13.5px;
+  transition: 0.35s ease-in-out;
+}
+
+@media screen and (max-width: 1300px) {
+  .contentGridOne {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    column-gap: 12px;
+    transition: 0.35s ease-in-out;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .contentGridOne {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    column-gap: 12px;
+    transition: 0.35s ease-in-out;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .contentGridOne {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    row-gap: 12px;
+    transition: 0.35s ease-in-out;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .contentGridOne {
+    grid-template-columns: repeat(1, 1fr);
+    column-gap: 12px;
+    transition: 0.35s ease-in-out;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .contentGridOne {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    column-gap: 12px;
+    transition: 0.35s ease-in-out;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .contentGridOne {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: 0.35s ease-in-out;
+  }
+}

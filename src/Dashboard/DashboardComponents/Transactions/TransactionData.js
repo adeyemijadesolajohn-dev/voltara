@@ -1,0 +1,93 @@
+export const tableHeads = [
+  "Month",
+  "Electricity Usage (kWh)",
+  "Units Remaining",
+  "Units Purchased",
+];
+
+export const tableData = [
+  {
+    id: 1,
+    month: "January",
+    usage: 250,
+    remaining: 0,
+    purchased: 300,
+  },
+  {
+    id: 2,
+    month: "February",
+    usage: 250,
+    remaining: 20,
+    purchased: 3050,
+  },
+  {
+    id: 3,
+    month: "March",
+    usage: 250,
+    remaining: 50,
+    purchased: 300,
+  },
+  {
+    id: 4,
+    month: "April",
+    usage: 250,
+    remaining: 20,
+    purchased: 550,
+  },
+  {
+    id: 5,
+    month: "May",
+    usage: 250,
+    remaining: 17,
+    purchased: 2050,
+  },
+  {
+    id: 6,
+    month: "June",
+    usage: 250,
+    remaining: 30,
+    purchased: 300,
+  },
+  {
+    id: 7,
+    month: "July",
+    usage: 250,
+    remaining: 5,
+    purchased: 3050,
+  },
+  {
+    id: 8,
+    month: "August",
+    usage: 250,
+    remaining: 10,
+    purchased: 3070,
+  },
+  {
+    id: 9,
+    month: "September",
+    usage: 250,
+    remaining: 20,
+    purchased: 3050,
+  },
+  {
+    id: 10,
+    month: "October",
+    usage: 250,
+    remaining: 30,
+    purchased: 800,
+  },
+  {
+    id: 11,
+    month: "November",
+    usage: 250,
+    remaining: 40,
+    purchased: 400,
+  },
+  {
+    id: 12,
+    month: "December",
+    usage: 250,
+    remaining: 35,
+    purchased: 3050,
+  },
+];

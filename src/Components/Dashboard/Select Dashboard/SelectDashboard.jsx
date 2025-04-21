@@ -8,6 +8,7 @@ import billpay from "../../../LoginAssets/Frame.png";
 import meter from "../../../LoginAssets/Vector.png";
 import partner from "../../../LoginAssets/garden_customer-lists-fill-26.png";
 import analytics from "../../../LoginAssets/carbon_analytics.png";
+import { Link } from "react-router-dom";
 
 const SelectDashboard = () => {
   return (
@@ -29,12 +30,13 @@ const SelectDashboard = () => {
               Choose the dashboard that suits your needs
             </p>
           </div>
-
           <div className="selectDashboardOptions">
-            <div className="selectDashboardCard">
-              <img src={customer} alt="customer" />
-              <h3 className="selectDashboardCardHeader">Customer</h3>
-            </div>
+            <Link to="/Dashboard">
+              <div className="selectDashboardCard">
+                <img src={customer} alt="customer" />
+                <h3 className="selectDashboardCardHeader">Customer</h3>
+              </div>
+            </Link>
 
             <div className="selectDashboardCard">
               <img src={account} alt="account" />

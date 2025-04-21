@@ -3,8 +3,7 @@ import "./Register.css";
 import "../../App.scss";
 import loginBG from "../../LoginAssets/Login placeholder BG.png";
 import logo from "../../LoginAssets/voltara placeholder logo.png";
-import { Land } from "react-router-dom";
-import { Join } from "react-router-dom";
+import { Link } from "react-router";
 import { FaUsersBetweenLines } from "react-icons/fa6";
 import { SiAmazonsimpleemailservice } from "react-icons/si";
 import { TbLockPassword, TbPassword } from "react-icons/tb";
@@ -28,13 +27,13 @@ const Register = () => {
 
         <div className="flex formDiv">
           <div className="headerDiv">
-            <Land to="/LandingPage">
+            <Link to="/LandingPage">
               <div className="logo">
                 <img src={logo} alt="logo" />
                 <h4>Voltara</h4>
                 <p>Energy Solutions</p>
               </div>
-            </Land>
+            </Link>
 
             <h3>Join Us</h3>
           </div>
@@ -48,7 +47,7 @@ const Register = () => {
                 <input
                   type="text"
                   id="inputField"
-                  placeholder="Company Name"
+                  placeholder="Company Ltd"
                   aria-placeholder="Company Name"
                   required
                 />
@@ -62,7 +61,7 @@ const Register = () => {
                 <input
                   type="Email"
                   id="inputField"
-                  placeholder="Company Email"
+                  placeholder="abc123@email.com"
                   aria-placeholder="Company Email"
                   required
                 />
@@ -76,7 +75,7 @@ const Register = () => {
                 <input
                   type="number"
                   id="inputField"
-                  placeholder="Phone Number"
+                  placeholder="0800 000 0000"
                   aria-placeholder="Phone Number"
                   required
                 />
@@ -90,7 +89,7 @@ const Register = () => {
                 <input
                   type={type}
                   id="inputField"
-                  placeholder="Password"
+                  placeholder="************"
                   aria-placeholder="Password"
                   required
                 />
@@ -119,7 +118,7 @@ const Register = () => {
                 <input
                   type={type}
                   id="inputField"
-                  placeholder="Confirm Password"
+                  placeholder="************"
                   aria-placeholder="Confirm Password"
                   required
                 />
@@ -165,15 +164,16 @@ const Register = () => {
               </label>
             </div>
 
-            <button type="submit" className="btn">
+            <div type="submit" className="btn">
+              <button></button>
               <span>Sign Up</span>
-            </button>
+            </div>
 
             <div className="registerLinkDiv">
               <span className="text">Already have an account? </span>
-              <Join to="/">
+              <Link to="/">
                 <span className="signUp link">Log In</span>
-              </Join>
+              </Link>
             </div>
           </form>
         </div>
