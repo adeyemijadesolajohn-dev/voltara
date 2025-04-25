@@ -18,6 +18,8 @@ const Sidebar = () => {
     }
   }, [isSidebarOpen]);
 
+  const [selected, setSelected] = useState(0);
+
   return (
     <div className={`sidebar ${sidebarClass}`}>
       <div className="sidebarFixed">
@@ -43,19 +45,26 @@ const Sidebar = () => {
 
         <nav className="navigation">
           <ul className="navList">
-            {navigationLinks.map((navigationLink) => (
-              <li className="navItem" key={navigationLink.id}>
+            {navigationLinks.map((navigationLink, index) => (
+              <li
+                className={selected === index ? "navItem active" : "navItem"}
+                key={index}
+                onClick={() => setSelected(index)}
+              >
                 <a
                   href="#"
                   className={`navLink ${
                     navigationLink.id === activeLinkIdx ? "active" : null
                   }`}
                 >
-                  <img
+                  {/* <img
                     src={navigationLink.image}
                     className="navLinkIcon"
                     alt={navigationLink.title}
-                  />
+                  /> */}
+
+                  <navigationLink.icon className="navLinkIcon" />
+
                   <span className="navLinkText">{navigationLink.title}</span>
                 </a>
               </li>
@@ -63,19 +72,26 @@ const Sidebar = () => {
           </ul>
 
           <ul className="navLowerList">
-            {navigationLowerLinks.map((navigationLowerLink) => (
-              <li className="navItem" key={navigationLowerLink.id}>
+            {navigationLowerLinks.map((navigationLowerLink, index) => (
+              <li
+                className={selected === index ? "navItem active" : "navItem"}
+                key={index}
+                onClick={() => setSelected(index)}
+              >
                 <a
                   href="#"
                   className={`navLink ${
                     navigationLowerLink.id === activeLinkIdx ? "active" : null
                   }`}
                 >
-                  <img
+                  {/* <img
                     src={navigationLowerLink.image}
                     className="navLinkIcon"
                     alt={navigationLowerLink.title}
-                  />
+                  /> */}
+
+                  <navigationLowerLink.icon className="navLinkIcon" />
+
                   <span className="navLinkText">
                     {navigationLowerLink.title}
                   </span>

@@ -1,18 +1,58 @@
-import { iconImgs } from "./LoginAssets/LoginAssets";
+import { iconImgs, iconIcon } from "./LoginAssets/LoginAssets";
 
 export const navigationLinks = [
-  { id: 1, title: "Customer", image: iconImgs.customer },
-  { id: 2, title: "Account", image: iconImgs.account },
-  { id: 3, title: "Billing/Payment", image: iconImgs.payment },
-  { id: 4, title: "Meter", image: iconImgs.meter },
-  { id: 5, title: "Partner", image: iconImgs.partner },
-  { id: 6, title: "Analysis", image: iconImgs.analysis },
+  {
+    id: 1,
+    title: "Customer",
+    image: iconImgs.customer,
+    icon: iconIcon.customerIcon,
+  },
+  {
+    id: 2,
+    title: "Account",
+    image: iconImgs.account,
+    icon: iconIcon.accountIcon,
+  },
+  {
+    id: 3,
+    title: "Billing/Payment",
+    image: iconImgs.payment,
+    icon: iconIcon.paymentIcon,
+  },
+  { id: 4, title: "Meter", image: iconImgs.meter, icon: iconIcon.meterIcon },
+  {
+    id: 5,
+    title: "Partner",
+    image: iconImgs.partner,
+    icon: iconIcon.partnerIcon,
+  },
+  {
+    id: 6,
+    title: "Analysis",
+    image: iconImgs.analysis,
+    icon: iconIcon.analysisIcon,
+  },
 ];
 
 export const navigationLowerLinks = [
-  { id: 7, title: "Support", image: iconImgs.support },
-  { id: 8, title: "Settings", image: iconImgs.settings },
-  { id: 9, title: "Log Out", image: iconImgs.logout },
+  {
+    id: 7,
+    title: "Support",
+    image: iconImgs.support,
+    icon: iconIcon.supportIcon,
+  },
+  {
+    id: 8,
+    title: "Settings",
+    image: iconImgs.settings,
+    icon: iconIcon.settingsIcon,
+  },
+  {
+    id: 9,
+    title: "Log Out",
+    image: iconImgs.logout,
+    icon: iconIcon.logoutIcon,
+  },
 ];
 
 export const customerSummary = [
