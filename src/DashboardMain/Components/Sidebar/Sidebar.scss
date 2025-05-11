@@ -1,0 +1,302 @@
+.sideBarContainer {
+  background-color: var(--secondaryColor);
+  width: 222px;
+  min-height: 100vh;
+  box-shadow: 2px 3.5px 7px rgba(0, 0, 0, 0.55);
+  transition: 0.35s ease-in-out;
+
+  .sideBarContent {
+    position: fixed;
+    transition: 0.35s ease-in-out;
+
+    .sideBarTop {
+      padding-top: 70px;
+      color: var(--primaryColor);
+      transition: 0.35s ease-in-out;
+
+      .clientLogoImg {
+        width: 200px;
+        height: 55px;
+        border-top-left-radius: 35px;
+        border-bottom-right-radius: 35px;
+        background-color: var(--whiteColor);
+        border: 3.5px inset whitesmoke;
+        margin-block: 0 12px;
+        margin-left: 13px;
+        overflow: hidden;
+        transition: 0.35s ease-in-out;
+        position: relative;
+
+        #clientLogoPhotoBefore {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-top-left-radius: 35px;
+          border-bottom-right-radius: 35px;
+          transition: 0.35s ease-in-out;
+        }
+
+        #clientLogoPhotoAfter {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-top-left-radius: 35px;
+          border-bottom-right-radius: 35px;
+          transition: 0.35s ease-in-out;
+        }
+
+        #clientLogoFile {
+          display: none;
+          transition: 0.35s ease-in-out;
+        }
+
+        #uploadBtn {
+          position: absolute;
+          width: 22px;
+          height: 22px;
+          transform: translatey(-90%);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          font-size: 12px;
+          color: var(--whiteColor);
+          background-color: var(--secondaryColor);
+          border-top-left-radius: 8px;
+          border-bottom-right-radius: 8px;
+          padding: 3.5px;
+          opacity: 0.7;
+          cursor: pointer;
+          transition: 0.35s ease-in-out;
+          box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.55);
+
+          &:hover {
+            opacity: 1;
+            background-color: var(--primaryColor);
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.7);
+            transition: 0.35s ease-in-out;
+          }
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          transition: 0.35s ease-in-out;
+        }
+      }
+
+      h2 {
+        font-size: 22px;
+        font-weight: 700;
+        margin-left: 12px;
+        margin-top: -12px;
+        margin-bottom: 12px;
+        text-shadow: 2px 2px 3.5px rgba(0, 0, 0, 0.35);
+        transition: 0.35s ease-in-out;
+      }
+    }
+
+    hr {
+      height: 2px;
+      width: 88%;
+      margin: 7px auto 0;
+      transition: 0.35s ease-in-out;
+    }
+
+    .sideBarCenter {
+      margin-block: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      transition: 0.35s ease-in-out;
+
+      .navTitle {
+        font-size: 13.5px;
+        font-weight: 700;
+        margin-inline: 22px;
+        border: 2px inset transparent;
+        border-radius: 7px;
+        padding: 5.5px 7px;
+        transition: 0.35s ease-in-out;
+
+        .navSpan {
+          display: flex;
+          align-items: center;
+          gap: 7px;
+          transition: 0.35s ease-in-out;
+        }
+
+        &:hover {
+          border: 2px inset whitesmoke;
+          background-color: white;
+          box-shadow: inset rgba(0, 0, 0, 0.35) 0px 20px 25px -5px;
+          transition: 0.35s ease-in-out;
+          color: var(--primaryColor);
+          transform: scale(1.1);
+          transition: 0.35s ease-in-out;
+        }
+
+        &.active {
+          border: 2px inset whitesmoke;
+          background-color: white;
+          box-shadow: inset rgba(0, 0, 0, 0.35) 0px 20px 25px -5px;
+          transition: 0.35s ease-in-out;
+          color: var(--primaryColor);
+          transform: scale(1.1);
+          transition: 0.35s ease-in-out;
+        }
+      }
+
+      .navContainer {
+        padding-left: 22px;
+        margin-top: 7px;
+        transition: 0.35s ease-in-out;
+
+        .navContent {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: flex-start;
+          text-align: left;
+          gap: 7px;
+          font-size: 13.5px;
+          font-weight: 700;
+          // margin-block: 5px;
+          cursor: pointer;
+          transition: 0.35s ease-in-out;
+
+          .navObject {
+            border: 2px inset transparent;
+            border-radius: 7px;
+            padding: 5.5px 7px;
+            width: 88%;
+            transition: 0.35s ease-in-out;
+
+            .navPath {
+              width: 100%;
+              display: flex;
+              align-items: center;
+              gap: 7px;
+              transition: 0.35s ease-in-out;
+            }
+
+            &:hover {
+              border: 2px inset whitesmoke;
+              background-color: white;
+              box-shadow: inset rgba(0, 0, 0, 0.35) 0px 20px 25px -5px;
+              transition: 0.35s ease-in-out;
+              color: var(--primaryColor);
+              transform: scale(1.1);
+              transition: 0.35s ease-in-out;
+            }
+
+            &.active {
+              background-color: white;
+              box-shadow: inset rgba(0, 0, 0, 0.35) 0px 20px 25px -5px,
+                rgba(0, 0, 0, 0.7) 0px 8px 12px -5px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              padding: 5.5px 15px;
+              column-gap: 12px;
+              letter-spacing: 0.035em;
+              border: 2px outset whitesmoke;
+              transform: scale(1.1);
+              transition: 0.35 ease-in-out;
+              font-size: 13.5px;
+              font-weight: 1000;
+              color: var(--primaryColor);
+              margin-left: 0;
+            }
+          }
+        }
+      }
+    }
+
+    .sideBarBottom {
+      margin-top: 12px;
+      padding-left: 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      transition: 0.35s ease-in-out;
+
+      .navContent {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        text-align: left;
+        gap: 7px;
+        font-size: 13.5px;
+        font-weight: 700;
+        // margin-block: 5px;
+        cursor: pointer;
+        transition: 0.35s ease-in-out;
+
+        .navObject {
+          border: 2px inset transparent;
+          border-radius: 7px;
+          padding: 5.5px 7px;
+          width: 88%;
+          transition: 0.35s ease-in-out;
+
+          .navPath {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            transition: 0.35s ease-in-out;
+          }
+
+          &:hover {
+            border: 2px inset whitesmoke;
+            background-color: white;
+            box-shadow: inset rgba(0, 0, 0, 0.35) 0px 20px 25px -5px;
+            transition: 0.35s ease-in-out;
+            color: var(--primaryColor);
+            transform: scale(1.1);
+            transition: 0.35s ease-in-out;
+          }
+
+          .active {
+            border: 2px inset whitesmoke;
+            background-color: white;
+            box-shadow: inset rgba(0, 0, 0, 0.35) 0px 20px 25px -5px;
+            transition: 0.35s ease-in-out;
+            color: var(--primaryColor);
+            transform: scale(1.1);
+            transition: 0.35s ease-in-out;
+          }
+        }
+      }
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+  color: var(--primaryColor);
+  transition: 0.35s ease-in-out;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  transition: 0.35s ease-in-out;
+}
+
+.navIcon {
+  font-size: 22px;
+  color: var(--primaryColor);
+  transition: 0.35s ease-in-out;
+  margin-right: 12px;
+  // margin-bottom: -7px;
+  transition: 0.35s ease-in-out;
+}
+
+.sidebarDown {
+  margin-left: -222px;
+  transition: 0.35s ease-in-out;
+}

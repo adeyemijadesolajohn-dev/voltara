@@ -52,7 +52,7 @@ const Sidebar = () => {
                 onClick={() => setSelected(index)}
               >
                 <a
-                  href="#"
+                  href={navigationLink.link}
                   className={`navLink ${
                     navigationLink.id === activeLinkIdx ? "active" : null
                   }`}

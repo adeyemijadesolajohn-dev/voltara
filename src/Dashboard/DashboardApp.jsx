@@ -1,18 +1,17 @@
 import "../App.scss";
 import Content from "./Layout/Content/Content";
 import Sidebar from "./Layout/Sidebar/Sidebar";
+// import DashboardMain from "./DashboardMain";
 
 const DashboardApp = () => {
   return (
     <>
       <div className="pageWrapper">
-        {/* <div className="sideBar"> */}
         <Sidebar />
-        {/* </div> */}
 
-        {/* <div className="contentWrapper"> */}
+        {/* <DashboardMain /> */}
+
         <Content />
-        {/* </div> */}
       </div>
     </>
   );

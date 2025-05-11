@@ -38,10 +38,12 @@ const SelectDashboard = () => {
               </div>
             </Link>
 
-            <div className="selectDashboardCard">
-              <img src={account} alt="account" />
-              <h3 className="selectDashboardCardHeader">Account</h3>
-            </div>
+            <Link to="/Dashboard/Account">
+              <div className="selectDashboardCard">
+                <img src={account} alt="account" />
+                <h3 className="selectDashboardCardHeader">Account</h3>
+              </div>
+            </Link>
 
             <div className="selectDashboardCard">
               <img src={billpay} alt="bill & payment" />

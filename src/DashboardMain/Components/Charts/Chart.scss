@@ -1,0 +1,53 @@
+.chartContainer {
+  flex: 5.5;
+  -webkit-box-shadow: 7px 7px 7px -2px rgba(0, 0, 0, 0.7);
+  box-shadow: 7px 7px 7px -2px rgba(0, 0, 0, 0.7);
+  background-color: var(--whiteColor);
+  border-radius: 12px;
+  padding: 12px;
+  border: 2px outset whitesmoke;
+  height: 200px;
+  transition: 0.35s ease-in-out;
+}
+
+.chartGrid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.35s ease-in-out;
+stroke: var(--secondaryColor);
+
+  .chartItem {
+    margin-bottom: 7px;
+    transition: 0.35s ease-in-out;
+    text-align: right;
+  }
+
+  .chartItemValue {
+    display: block;
+    font-weight: 700;
+    color: var(--primaryColor);
+    transition: 0.35s ease-in-out;
+  }
+
+  .chartBar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -20px;
+    transition: 0.35s ease-in-out;
+
+    .percent {
+      position: relative;
+      transition: 0.35s ease-in-out;
+
+      svg {
+        position: relative;
+        width: 210px;
+        height: 210px;
+        transform: rotate(-90deg);
+        transition: 0.35s ease-in-out;
+      }
+    }
+  }
+}

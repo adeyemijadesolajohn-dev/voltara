@@ -1,5 +1,5 @@
 import "./App.scss";
-import Dashboard from "./Dashboard/DashboardApp";
+import Dashboard from "./DashboardMain/DashboardApp";
 import Login from "./Components/Login/Login";
 import Register from "./Components/Register/Register";
 import LandingPage from "./Components/Landing Page/LandingPage";
@@ -9,6 +9,11 @@ import { createBrowserRouter, RouterProvider } from "react-router";
 import ElectricBill from "./Components/Dashboard/Select Dashboard/ElectricBill/ElectricBill";
 import DebitSummary from "./Components/Dashboard/Select Dashboard/ElectricBill/DebitSummary";
 import CreateAccount from "./Components/Dashboard/Select Dashboard/CreateAccount/CreateAccount";
+import Account from "./DashboardMain/Pages/Account/Account";
+import BillPay from "./DashboardMain/Pages/BillPay/BillPay";
+import Partner from "./DashboardMain/Pages/Partner/Partner";
+import Analytics from "./DashboardMain/Pages/Analytics/Analytics";
+import Meter from "./DashboardMain/Pages/Meter/Meter";
 
 const router = createBrowserRouter([
   {
@@ -32,6 +37,46 @@ const router = createBrowserRouter([
     element: (
       <div>
         <Dashboard />
+      </div>
+    ),
+  },
+  {
+    path: "/Dashboard/Account",
+    element: (
+      <div>
+        <Account />
+      </div>
+    ),
+  },
+  {
+    path: "/Dashboard/Billing",
+    element: (
+      <div>
+        <BillPay />
+      </div>
+    ),
+  },
+  {
+    path: "/Dashboard/Meter",
+    element: (
+      <div>
+        <Meter />
+      </div>
+    ),
+  },
+  {
+    path: "/Dashboard/Partner",
+    element: (
+      <div>
+        <Partner />
+      </div>
+    ),
+  },
+  {
+    path: "/Dashboard/Analytics",
+    element: (
+      <div>
+        <Analytics />
       </div>
     ),
   },
@@ -80,6 +125,14 @@ const router = createBrowserRouter([
     element: (
       <div>
         <CreateAccount />
+      </div>
+    ),
+  },
+  {
+    path: "/Dashboard/Account",
+    element: (
+      <div>
+        <Account />
       </div>
     ),
   },

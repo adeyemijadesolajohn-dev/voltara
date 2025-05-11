@@ -1,0 +1,199 @@
+.meter {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+
+  .meterTitle {
+    position: fixed;
+    left: 0;
+    margin: 7px;
+
+    .meterLogo {
+      width: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: 0.35s ease-in-out;
+      border-bottom-left-radius: 35px;
+      border-top-right-radius: 35px;
+      background-color: var(--whiteColor);
+      border: 3.5px inset whitesmoke;
+      padding-inline: 22px;
+      padding-block: -22px;
+      //   margin-left: 20px;
+
+      .meterLogoImg {
+        img {
+          height: 55px;
+          width: 55px;
+          object-fit: contain;
+          // padding-bottom: 0.5rem;
+          transition: 0.35s ease-in-out;
+        }
+      }
+
+      .accountLogoName {
+        h4 {
+          font-size: 20px;
+          text-align: right;
+          color: var(--primaryColor);
+          font-weight: 800;
+          transition: 0.35s ease-in-out;
+        }
+      }
+      p {
+        font-size: 10px;
+        text-align: right;
+        color: var(--secondaryColor);
+        font-weight: 500;
+        margin-top: -5.5px;
+        padding-bottom: 2px;
+        transition: 0.35s ease-in-out;
+        -webkit-text-stroke: 0.35px var(--primaryColor);
+      }
+    }
+  }
+
+  .meterContent {
+    display: flex;
+
+    .meterContainer {
+      flex: 5.5;
+      padding: 12px 0px 0px;
+
+      .meterWidgets,
+      .meterCharts {
+        display: flex;
+        justify-content: space-between;
+        margin-inline: 20px;
+        gap: 20px;
+      }
+
+      .meterCharts {
+        padding: 7px 0px;
+      }
+
+      .meterTable {
+        padding: 0px 22px;
+        margin: 20px 0px;
+      }
+    }
+  }
+}
+
+.gridTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid var(--secondaryColor);
+  transition: 0.35s ease-in-out;
+  padding-bottom: 7px;
+  padding-inline: 12px;
+  margin-bottom: 12px;
+
+  .gridLeftHeading {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    transition: 0.35s ease-in-out;
+  }
+}
+
+.usageIcon {
+  transition: 0.35s ease-in-out;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  height: 22px;
+  width: 22px;
+  color: var(--primaryColor);
+
+  .donut {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: 0.35s ease-in-out;
+  }
+
+  .voltage {
+    height: 12px;
+    width: 12px;
+    position: relative;
+    transition: 0.35s ease-in-out;
+  }
+}
+
+.gridRightHeading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  transition: 0.35s ease-in-out;
+
+  .barDate {
+    position: block;
+    transition: 0.35s ease-in-out;
+    color: var(--secondaryColor);
+    font-size: 10px;
+    font-weight: 555;
+    margin-left: -2px;
+    cursor: pointer;
+
+    &:hover {
+      color: var(--primaryColor);
+      transition: 0.35s ease-in-out;
+    }
+  }
+
+  .optionIcon {
+    position: block;
+    transition: 0.35s ease-in-out;
+    color: var(--secondaryColor);
+    font-size: 13.5px;
+    font-weight: 2000;
+    cursor: pointer;
+
+    &:hover {
+      color: var(--primaryColor);
+      transition: 0.35s ease-in-out;
+    }
+  }
+}
+
+.midAccount {
+  .midAccountHolder {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    transition: 0.35s ease-in-out;
+    margin-inline: 55px;
+
+    .midAccountHeader {
+      &:first-child {
+        color: var(--primaryColor);
+      }
+    }
+  }
+}
+
+.meterMapHolder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  margin: 13.5px;
+  background-color: var(--whiteColor);
+  border: 2px outset whitesmoke;
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.55) 0 5.5px 12px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.55) 0 5.5px 12px;
+  transition: 0.35s ease-in-out;
+}

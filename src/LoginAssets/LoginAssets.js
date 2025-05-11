@@ -83,7 +83,7 @@ import {
   GiElectric as voltageIcon,
 } from "react-icons/gi";
 import { LuLayoutDashboard as overviewIcon } from "react-icons/lu";
-import { ImUsers as partnerIcon } from "react-icons/im";
+import { ImUsers as partnerIcon, ImPowerCord as powerUsageIcon } from "react-icons/im";
 import { IoMdAnalytics as analysisIcon } from "react-icons/io";
 
 export const iconImgs = {
@@ -161,4 +161,5 @@ export const iconIcon = {
   statusIcon,
   nairaIcon,
   billsIcon,
+powerUsageIcon,
 };

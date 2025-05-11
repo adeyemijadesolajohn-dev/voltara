@@ -1,12 +1,29 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
-import DashboardApp from "./DashboardApp";
-import { SidebarProvider } from "./Context/sidebarContext";
+import { createBrowserRouter, RouterProvider } from "react-router";
+import Content from "./Layout/Content/Content";
+import Account from "./Layout/Account/Account";
 
-ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <SidebarProvider>
-      <DashboardApp />
-    </SidebarProvider>
-  </React.StrictMode>
-);
+const router = createBrowserRouter([
+  {
+    path: "/Dashboard/",
+    element: (
+      <div>
+        <Content />
+      </div>
+    ),
+  },
+  {
+    path: "/Dashboard/Account",
+    element: (
+      <div>
+        <Account />
+      </div>
+    ),
+  },
+]);
+
+function App() {
+  return <RouterProvider router={router} />;
+}
+
+export default App;
