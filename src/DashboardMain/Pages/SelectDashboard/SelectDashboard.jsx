@@ -8,7 +8,7 @@ import billpay from "../../../LoginAssets/Frame.png";
 import meter from "../../../LoginAssets/Vector.png";
 import partner from "../../../LoginAssets/garden_customer-lists-fill-26.png";
 import analytics from "../../../LoginAssets/carbon_analytics.png";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 
 const SelectDashboard = () => {
   return (
@@ -45,25 +45,33 @@ const SelectDashboard = () => {
               </div>
             </Link>
 
-            <div className="selectDashboardCard">
-              <img src={billpay} alt="bill & payment" />
-              <h3 className="selectDashboardCardHeader">Bill & Payment</h3>
-            </div>
+            <Link to="/Dashboard/Billing">
+              <div className="selectDashboardCard">
+                <img src={billpay} alt="bill & payment" />
+                <h3 className="selectDashboardCardHeader">Bill & Payment</h3>
+              </div>
+            </Link>
 
-            <div className="selectDashboardCard">
-              <img src={meter} alt="meter" />
-              <h3 className="selectDashboardCardHeader">Meter</h3>
-            </div>
+            <Link to="/Dashboard/Meter">
+              <div className="selectDashboardCard">
+                <img src={meter} alt="meter" />
+                <h3 className="selectDashboardCardHeader">Meter</h3>
+              </div>
+            </Link>
 
-            <div className="selectDashboardCard">
-              <img src={partner} alt="partner" />
-              <h3 className="selectDashboardCardHeader">Partner</h3>
-            </div>
+            <Link to="/Dashboard/Partner">
+              <div className="selectDashboardCard">
+                <img src={partner} alt="partner" />
+                <h3 className="selectDashboardCardHeader">Partner</h3>
+              </div>
+            </Link>
 
-            <div className="selectDashboardCard">
-              <img src={analytics} alt="analytics" />
-              <h3 className="selectDashboardCardHeader">Analytics</h3>
-            </div>
+            <Link to="/Dashboard/Analytics">
+              <div className="selectDashboardCard">
+                <img src={analytics} alt="analytics" />
+                <h3 className="selectDashboardCardHeader">Analytics</h3>
+              </div>
+            </Link>
           </div>
         </div>
       </div>

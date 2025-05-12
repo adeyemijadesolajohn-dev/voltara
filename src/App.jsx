@@ -3,7 +3,7 @@ import Dashboard from "./DashboardMain/DashboardApp";
 import Login from "./Components/Login/Login";
 import Register from "./Components/Register/Register";
 import LandingPage from "./Components/Landing Page/LandingPage";
-import SelectDashboard from "./Components/Dashboard/Select Dashboard/SelectDashboard";
+import SelectDashboard from "./DashboardMain/Pages/SelectDashboard/SelectDashboard";
 import CustomerRegistration from "./DashboardMain/Pages/CustomerRegistration/CustomerRegistration";
 import { createBrowserRouter, RouterProvider } from "react-router";
 import ElectricBill from "./Components/Dashboard/Select Dashboard/ElectricBill/ElectricBill";
