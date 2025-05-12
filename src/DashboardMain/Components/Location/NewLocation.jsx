@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import $ from "jquery";
-import "../ElectricBill.scss";
+import "../../Pages/ElectricBill/ElectricBill.scss";
 import "./NewLocation.scss";
 import { GrMapLocation } from "react-icons/gr";
 

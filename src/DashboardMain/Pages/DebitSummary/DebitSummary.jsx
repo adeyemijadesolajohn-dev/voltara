@@ -1,13 +1,12 @@
 import React from "react";
 import "./DebitSummary.scss";
-import "../../../../App.scss";
-import loginBG from "../../../../LoginAssets/Login placeholder BG.png";
-import logo from "../../../../LoginAssets/voltara placeholder logo.png";
+import "../../../App.scss";
+import loginBG from "../../../LoginAssets/Login placeholder BG.png";
+import logo from "../../../LoginAssets/voltara placeholder logo.png";
 import { Link } from "react-router";
-import DP from "../../../../LoginAssets/pngegg.png";
 import { TbArrowAutofitContent } from "react-icons/tb";
 import { TbCurrencyNaira } from "react-icons/tb";
-import BulletChart from "./BulletChart/BulletChart";
+import BulletChart from "../../Components/BulletChart/BulletChart";
 
 const DebitSummary = () => {
   return (
@@ -36,11 +35,8 @@ const DebitSummary = () => {
 
         <div className="flex formDiv">
           <div className="headerdiv">
-            <Link to="/Dashboard">
+            <Link to="/Dashboard/Billing">
               <div className="logoHeader">
-                {/* <div className="DPDiv">
-									<img src={DP} alt=" DP" />
-								</div> */}
                 <div className="logoText">
                   <h4>John Doe</h4>
                   <p>
@@ -49,7 +45,7 @@ const DebitSummary = () => {
                 </div>
               </div>
             </Link>
-            <Link to="/LandingPage">
+            <Link to="/Dashboard/Billing">
               <div className="logoside">
                 <div className="clientname">
                   <h4>Voltara</h4>

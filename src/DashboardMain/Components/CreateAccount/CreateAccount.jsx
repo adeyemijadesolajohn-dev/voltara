@@ -84,16 +84,6 @@ const CreateAccount = () => {
   return (
     <div className="createContainer">
       <form action="#" className="form">
-        {/* <div className="formHeadingDiv">
-        <div className="formHeading">
-          <h1>Create Account</h1>
-        </div>
-
-        <div className="closeIcon">
-          <iconIcon.closeIcon />
-        </div>
-      </div> */}
-
         <div className="progressbar">
           <div className="progresss" id="progresss"></div>
           <div
@@ -107,12 +97,12 @@ const CreateAccount = () => {
 
         <div className="formStep formStepActive">
           <div className="inputGroup">
-            <div className="inputDiv">
-              <div className="flex input">
-                <FaRegUser className="icon" />
+            <div className="inputDivCA">
+              <div className="flex inputCA">
+                <FaRegUser className="iconCA" />
                 <input
                   type="text"
-                  id="userName"
+                  id="userNameCA"
                   placeholder="Full Name"
                   aria-placeholder="Full Name"
                   required
@@ -121,12 +111,12 @@ const CreateAccount = () => {
               </div>
             </div>
 
-            <div className="inputDiv">
-              <div className="flex input">
-                <MdOutlineAttachEmail className="icon" />
+            <div className="inputDivCA">
+              <div className="flex inputCA">
+                <MdOutlineAttachEmail className="iconCA" />
                 <input
                   type="Email"
-                  id="inputField"
+                  id="inputFieldCA"
                   placeholder="abc123@email.com"
                   aria-placeholder="Email"
                   required
@@ -135,12 +125,12 @@ const CreateAccount = () => {
               </div>
             </div>
 
-            <div className="inputDiv">
-              <div className="flex input">
-                <AiOutlinePhone className="icon" />
+            <div className="inputDivCA">
+              <div className="flex inputCA">
+                <AiOutlinePhone className="iconCA" />
                 <input
                   type="number"
-                  id="inputField"
+                  id="inputFieldCA"
                   placeholder="0800 000 0000"
                   aria-placeholder="Phone Number"
                   required
@@ -149,12 +139,12 @@ const CreateAccount = () => {
               </div>
             </div>
 
-            <div className="inputDiv">
-              <div className="flex input">
-                <FaRegIdCard className="icon" />
+            <div className="inputDivCA">
+              <div className="flex inputCA">
+                <FaRegIdCard className="iconCA" />
                 <input
                   type="number"
-                  id="inputField"
+                  id="inputFieldCA"
                   placeholder="0000000000"
                   aria-placeholder="customer id Number"
                   required
@@ -163,12 +153,12 @@ const CreateAccount = () => {
               </div>
             </div>
 
-            <div className="inputDiv">
-              <div className="flex input">
-                <MdOutlineElectricMeter className="icon" />
+            <div className="inputDivCA">
+              <div className="flex inputCA">
+                <MdOutlineElectricMeter className="iconCA" />
                 <input
                   type="number"
-                  id="inputField"
+                  id="inputFieldCA"
                   placeholder="0000000000000"
                   aria-placeholder="meter id Number"
                   required
@@ -186,7 +176,7 @@ const CreateAccount = () => {
                     <button type="button" className="nextButton"></button>
                     <span>
                       <p>Next</p>
-                      <FaDiagramNext className="icon" />
+                      <FaDiagramNext className="iconCA" />
                     </span>
                   </div>
                 </div>
@@ -197,9 +187,9 @@ const CreateAccount = () => {
 
         <div className="formStep">
           <div className="inputGroup">
-            <div className="inputText">
+            <div className="inputTextCA">
               <div className="flex createCheckBox">
-                <FaRegCreditCard className="icon" />
+                <FaRegCreditCard className="iconCA" />
                 <div className="label">
                   <h3>Postpaid</h3>
                   <input
@@ -212,9 +202,9 @@ const CreateAccount = () => {
               </div>
             </div>
 
-            <div className="inputText">
+            <div className="inputTextCA">
               <div className="flex createCheckBox">
-                <FaRegMoneyBill1 className="icon" />
+                <FaRegMoneyBill1 className="iconCA" />
                 <div className="label">
                   <h3>Prepaid</h3>
                   <input
@@ -227,9 +217,9 @@ const CreateAccount = () => {
               </div>
             </div>
 
-            <div className="inputText">
+            <div className="inputTextCA">
               <div className="flex createCheckBox">
-                <FaShirtsinbulk className="icon" />
+                <FaShirtsinbulk className="iconCA" />
                 <div className="label">
                   <h3>Maximum Demand (MD)</h3>
                   <input
@@ -248,7 +238,7 @@ const CreateAccount = () => {
                   <div type="button" className="btn">
                     <button type="button" className="prevButton"></button>
                     <span>
-                      <FaDiagramNext className="icon" />
+                      <FaDiagramNext className="iconCA" />
                       <p>Prev</p>
                     </span>
                   </div>
@@ -259,7 +249,7 @@ const CreateAccount = () => {
                     <button type="button" className="nextButton"></button>
                     <span>
                       <p>Next</p>
-                      <FaDiagramNext className="icon" />
+                      <FaDiagramNext className="iconCA" />
                     </span>
                   </div>
                 </div>
@@ -270,9 +260,9 @@ const CreateAccount = () => {
 
         <div className="formStep">
           <div className="inputGroup">
-            <div className="inputText">
+            <div className="inputTextCA">
               <div className="flex createCheckBox">
-                <FaHouseUser className="icon" />
+                <FaHouseUser className="iconCA" />
                 <div className="label">
                   <h3>Residential</h3>
                   <input
@@ -285,9 +275,9 @@ const CreateAccount = () => {
               </div>
             </div>
 
-            <div className="inputText">
+            <div className="inputTextCA">
               <div className="flex createCheckBox">
-                <FaBuildingUser className="icon" />
+                <FaBuildingUser className="iconCA" />
                 <div className="label">
                   <h3>Commercial</h3>
                   <input
@@ -300,9 +290,9 @@ const CreateAccount = () => {
               </div>
             </div>
 
-            <div className="inputText">
+            <div className="inputTextCA">
               <div className="flex createCheckBox">
-                <LiaIndustrySolid className="icon" />
+                <LiaIndustrySolid className="iconCA" />
                 <div className="label">
                   <h3>Industrial</h3>
                   <input
@@ -315,9 +305,9 @@ const CreateAccount = () => {
               </div>
             </div>
 
-            <div className="inputText">
+            <div className="inputTextCA">
               <div className="flex createCheckBox">
-                <RiGovernmentLine className="icon" />
+                <RiGovernmentLine className="iconCA" />
                 <div className="label">
                   <h3>Government Institution</h3>
                   <input
@@ -336,7 +326,7 @@ const CreateAccount = () => {
                   <div type="button" className="btn">
                     <button type="button" className="prevButton"></button>
                     <span>
-                      <FaDiagramNext className="icon" />
+                      <FaDiagramNext className="iconCA" />
                       <p>Prev</p>
                     </span>
                   </div>
@@ -347,7 +337,7 @@ const CreateAccount = () => {
                     <button type="button" className="nextButton"></button>
                     <span>
                       <p>Submit</p>
-                      <ImCheckmark2 className="icon" />
+                      <ImCheckmark2 className="iconCA" />
                     </span>
                   </div>
                 </div>

@@ -88,124 +88,128 @@
   }
 }
 
-.inputDiv {
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 2rem;
-  transition: 0.35s ease-in-out;
-
-  label {
-    position: absolute;
-    top: 50%;
-    left: 40px;
-    transform: translateY(-50%);
-    color: var(--inputColorLight);
-    font-size: 13.5px;
-    font-weight: 555;
+.inputGroup {
+  .inputDivCA {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
     transition: 0.35s ease-in-out;
-    pointer-events: none;
-    opacity: 1;
-  }
 
-  .icon {
-    position: absolute;
-    font-size: 20px;
-    color: var(--inputColorLight);
-    transition: 0.35s ease-in-out;
-    left: 10px;
-  }
-
-  .eye {
-    position: absolute;
-    font-size: 20px;
-    color: var(--inputColorLight);
-    transition: 0.35s ease-in-out;
-    right: 10px;
-  }
-
-  &:hover {
-    .icon {
-      color: var(--primaryColor);
-      transition: 0.35s ease-in-out;
-    }
-  }
-
-  #inputField,
-  #userName {
-    font-weight: 555;
-    font-size: 12px;
-    padding: 1rem 3.5rem;
-    color: var(--inputColor);
-    border: 2px solid var(--secondaryColor);
-    border-radius: 20px;
-    transition: all 0.35s ease-in-out;
-    background-color: white;
-    outline: none;
-    width: 700px;
-
-    &::placeholder {
-      opacity: 0;
-      transition: 0.55s ease-in-out;
-      font-size: 13.5px;
-    }
-
-    &:hover {
-      border: 2px solid var(--primaryColor);
-      color: var(--primaryColor);
-      transition: 0.35s ease-in-out;
-
-      ~ label,
-      ~ .eye {
-        color: var(--primaryColor);
-        transition: 0.35s ease-in-out;
-      }
-
-      &::placeholder {
-        color: var(--primaryColor);
-        transition: 0.55s ease-in-out;
-      }
-    }
-
-    &:focus,
-    &:valid {
-      border: 2px solid var(--primaryColor);
-      color: var(--inputColor);
-      transition: 0.35s ease-in-out;
-
-      ~ label {
-        top: -6.4px;
-        left: 20px;
-        color: var(--primaryColor);
-        font-size: 11px;
-        transition: 0.08s ease-out;
-        background-color: var(--whiteColor);
-        border-top-left-radius: 8px;
-        border-top-right-radius: 8px;
-        border-inline-end: 2px solid var(--primaryColor);
-        border-inline-start: 2px solid var(--primaryColor);
-        border-top: 2px solid var(--primaryColor);
-        padding: 0 5px;
-        opacity: 1;
-      }
-
-      ~ .icon {
-        color: var(--primaryColor);
-        transition: 0.35s ease-in-out;
-      }
-    }
-
-    &:focus-visible {
-      border-color: var(--primaryColor);
-      color: var(--primaryColor);
-      font-weight: 555;
-      transition: 0.35s ease-in-out;
-
-      &::placeholder {
-        opacity: 1;
-        transition: 0.55s ease-in-out;
+    .inputCA {
+      label {
+        position: absolute;
+        top: 50%;
+        left: 40px;
+        transform: translateY(-50%);
         color: var(--inputColorLight);
+        font-size: 13.5px;
+        font-weight: 555;
+        transition: 0.35s ease-in-out;
+        pointer-events: none;
+        opacity: 1;
+      }
+
+      .iconCA {
+        position: absolute;
+        font-size: 20px;
+        color: var(--inputColorLight);
+        transition: 0.35s ease-in-out;
+        left: 10px;
+      }
+
+      .eyeCA {
+        position: absolute;
+        font-size: 20px;
+        color: var(--inputColorLight);
+        transition: 0.35s ease-in-out;
+        right: 10px;
+      }
+
+      &:hover {
+        .iconCA {
+          color: var(--primaryColor);
+          transition: 0.35s ease-in-out;
+        }
+      }
+
+      #inputFieldCA,
+      #userNameCA {
+        font-weight: 555;
         font-size: 12px;
+        padding: 1rem 3.5rem;
+        color: var(--inputColor);
+        border: 2px solid var(--secondaryColor);
+        border-radius: 20px;
+        transition: all 0.35s ease-in-out;
+        background-color: white;
+        outline: none;
+        width: 700px;
+
+        &::placeholder {
+          opacity: 0;
+          transition: 0.55s ease-in-out;
+          font-size: 13.5px;
+        }
+
+        &:hover {
+          border: 2px solid var(--primaryColor);
+          color: var(--primaryColor);
+          transition: 0.35s ease-in-out;
+
+          ~ label,
+          ~ .eyeCA {
+            color: var(--primaryColor);
+            transition: 0.35s ease-in-out;
+          }
+
+          &::placeholder {
+            color: var(--primaryColor);
+            transition: 0.55s ease-in-out;
+          }
+        }
+
+        &:focus,
+        &:valid {
+          border: 2px solid var(--primaryColor);
+          color: var(--inputColor);
+          transition: 0.35s ease-in-out;
+
+          ~ label {
+            top: -6.4px;
+            left: 20px;
+            color: var(--primaryColor);
+            font-size: 11px;
+            transition: 0.08s ease-out;
+            background-color: var(--whiteColor);
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            border-inline-end: 2px solid var(--primaryColor);
+            border-inline-start: 2px solid var(--primaryColor);
+            border-top: 2px solid var(--primaryColor);
+            padding: 0 5px;
+            opacity: 1;
+          }
+
+          ~ .iconCA {
+            color: var(--primaryColor);
+            transition: 0.35s ease-in-out;
+          }
+        }
+
+        &:focus-visible {
+          border-color: var(--primaryColor);
+          color: var(--primaryColor);
+          font-weight: 555;
+          transition: 0.35s ease-in-out;
+
+          &::placeholder {
+            opacity: 1;
+            transition: 0.55s ease-in-out;
+            color: var(--inputColorLight);
+            font-size: 12px;
+          }
+        }
       }
     }
   }
@@ -223,7 +227,7 @@
   margin-bottom: 3.5rem;
   transition: 0.35s ease-in-out;
 
-  .icon {
+  .iconCA {
     position: absolute;
     font-size: 20px;
     color: var(--inputColorLight);

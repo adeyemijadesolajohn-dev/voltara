@@ -1,18 +1,17 @@
 import React from "react";
 import $ from "jquery";
 import "./ElectricBill.scss";
-import "../../../../App.scss";
-import loginBG from "../../../../LoginAssets/Login placeholder BG.png";
-import clientLogo from "../../../../LoginAssets/pngegg.png";
-import mastercard from "../../../../LoginAssets/pngimg.com - mastercard_PNG16.png";
-import visa from "../../../../LoginAssets/[CITYPNG.COM]HD Visa Payment Logo PNG - 2000x2000.png";
-import verve from "../../../../LoginAssets/verve.1024x355.png";
-import NewLocation from "./Location/NewLocation";
+import "../../../App.scss";
+import loginBG from "../../../LoginAssets/Login placeholder BG.png";
+import clientLogo from "../../../LoginAssets/pngegg.png";
+import mastercard from "../../../LoginAssets/pngimg.com - mastercard_PNG16.png";
+import visa from "../../../LoginAssets/[CITYPNG.COM]HD Visa Payment Logo PNG - 2000x2000.png";
+import verve from "../../../LoginAssets/verve.1024x355.png";
+import NewLocation from "../../Components/Location/NewLocation";
 import { Link } from "react-router";
-import { FaRegCreditCard, FaDiagramNext } from "react-icons/fa6";
-
+import { FaRegCreditCard } from "react-icons/fa6";
 import { ImCheckmark2 } from "react-icons/im";
-import checkMark from "../../../../LoginAssets/green-tick.gif";
+import checkMark from "../../../LoginAssets/green-tick.gif";
 import { GiMeshNetwork } from "react-icons/gi";
 import { TbCurrencyNaira } from "react-icons/tb";
 import { MdOutlineElectricMeter, MdOutlinePayments } from "react-icons/md";
@@ -22,8 +21,6 @@ import { IoCardOutline } from "react-icons/io5";
 import { MdCancelPresentation } from "react-icons/md";
 import { MdOutlinePin } from "react-icons/md";
 import { VscFilePdf } from "react-icons/vsc";
-// import { PiUpload } from "react-icons/pi";
-// import customerDP from "../../../../LoginAssets/vecteezy_user-icon-on-transparent-background_19879198.png";
 
 var next_click = document.querySelectorAll(".nextButton");
 var main_form = document.querySelectorAll(".main");
@@ -129,7 +126,7 @@ const ElectricBill = () => {
 
         <div className="flex formDiv">
           <div className="headerDiv">
-            <Link to="/Dashboard">
+            <Link to="/Dashboard/Billing">
               <div className="logo">
                 <img src={clientLogo} alt=" clientLogo" />
                 <h4>Company Name</h4>
@@ -462,16 +459,18 @@ const ElectricBill = () => {
                 </div>
               </div>
 
-              <div className="cancelTransaction">
-                <div className="cancelButton">
-                  <div type="button" className="cancelBtn">
-                    <span>
-                      <p>Cancel Transaction</p>
-                      <MdCancelPresentation className="icon" />
-                    </span>
+              <Link to="/Dashboard/Billing">
+                <div className="cancelTransaction">
+                  <div className="cancelButton">
+                    <div type="button" className="cancelBtn">
+                      <span>
+                        <p>Cancel Transaction</p>
+                        <MdCancelPresentation className="icon" />
+                      </span>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </Link>
             </div>
           </div>
 
@@ -519,16 +518,18 @@ const ElectricBill = () => {
                 </div>
               </div>
 
-              <div className="cancelTransaction">
-                <div className="cancelButton">
-                  <div type="button" className="cancelBtn">
-                    <span>
-                      <p>Cancel Transaction</p>
-                      <MdCancelPresentation className="icon" />
-                    </span>
+              <Link to="/Dashboard/Billing">
+                <div className="cancelTransaction">
+                  <div className="cancelButton">
+                    <div type="button" className="cancelBtn">
+                      <span>
+                        <p>Cancel Transaction</p>
+                        <MdCancelPresentation className="icon" />
+                      </span>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </Link>
             </div>
           </div>
 
@@ -548,11 +549,6 @@ const ElectricBill = () => {
                       r="25"
                       fill="none"
                     />
-                    {/* <path
-                    className="checkmark__check"
-                    fill="none"
-                    d="M14.1 27.217.1 7.2 16.7-16.8"
-                  /> */}
                   </svg>
 
                   <img src={checkMark} alt="checkMark" />
@@ -609,15 +605,17 @@ const ElectricBill = () => {
                     </div>
                   </div>
 
-                  <div className="nextButton">
-                    <div type="button" className="btn">
-                      <button type="button" className="nextButton"></button>
-                      <span>
-                        <p>Finish</p>
-                        <ImCheckmark2 className="icon" />
-                      </span>
+                  <Link to="/Dashboard/Billing">
+                    <div className="nextButton">
+                      <div type="button" className="btn">
+                        <button type="button" className="nextButton"></button>
+                        <span>
+                          <p>Finish</p>
+                          <ImCheckmark2 className="icon" />
+                        </span>
+                      </div>
                     </div>
-                  </div>
+                  </Link>
                 </div>
               </div>
             </div>

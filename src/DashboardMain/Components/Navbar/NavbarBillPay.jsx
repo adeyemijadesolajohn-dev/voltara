@@ -4,6 +4,7 @@ import { SidebarContext } from "../Sidebar/SidebarContext";
 import { iconIcon } from "../../../LoginAssets/LoginAssets";
 import { IoIosArrowDown } from "react-icons/io";
 import { MdPersonSearch } from "react-icons/md";
+import { Link } from "react-router";
 
 const Navbar = () => {
   const { toggleSidebar } = useContext(SidebarContext);
@@ -39,6 +40,11 @@ const Navbar = () => {
 
       <div className="contentTopMenu">
         <ul className="menuBar">
+          <Link to="/DebitSummary">
+            <li>
+              <a>Generate Bill</a>
+            </li>
+          </Link>
           <li>
             <a href="#">All Categories</a>
             <div className="chevronDown">
@@ -47,12 +53,6 @@ const Navbar = () => {
           </li>
           <li>
             <a href="#">All Status</a>
-            <div className="chevronDown">
-              <IoIosArrowDown className="arrowDown" />
-            </div>
-          </li>
-          <li>
-            <a href="#">Generate Bill</a>
             <div className="chevronDown">
               <IoIosArrowDown className="arrowDown" />
             </div>

@@ -1,7 +1,7 @@
 import React from "react";
 import $ from "jquery";
 import "./CustomerRegistration.scss";
-import "../../../App.scss";
+// import "../../../App.scss";
 import loginBG from "../../../LoginAssets/Login placeholder BG.png";
 import clientLogo from "../../../LoginAssets/pngegg.png";
 import { Link } from "react-router";
@@ -147,7 +147,7 @@ const CustomerRegistration = () => {
             </Link>
           </div>
 
-          <div className="grid main active">
+          <div className="grid main marginHead active">
             <div className="casing">
               <div className="text">
                 <h2>Customer Information</h2>
@@ -228,7 +228,7 @@ const CustomerRegistration = () => {
             </div>
           </div>
 
-          <div className="grid main">
+          <div className="grid main marginHead">
             <div className="casing">
               <div className="text">
                 <h2>Identification Documents</h2>
@@ -308,7 +308,7 @@ const CustomerRegistration = () => {
             </div>
           </div>
 
-          <div className="grid main">
+          <div className="grid main marginHead">
             <div className="casing">
               <div className="text">
                 <h2>Customer Type</h2>
@@ -388,7 +388,7 @@ const CustomerRegistration = () => {
             </div>
           </div>
 
-          <div className="grid main">
+          <div className="grid main marginHead">
             <div className="casing">
               <div className="text">
                 <h2>Occupant Type</h2>
@@ -468,7 +468,7 @@ const CustomerRegistration = () => {
             </div>
           </div>
 
-          <div className="grid main">
+          <div className="grid main marginHead">
             <div className="casing">
               <div className="checkMark">
                 <svg
