@@ -3,38 +3,40 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
-import "./LandingPageSlider.css";
+import "./LandingPageSlider.scss";
+import { iconImages } from "../../../LoginAssets/LoginAssets";
 
 const slidesData = [
   {
-    imgSrc: "../../../LoginAssets/[GetPaidStock.com]-67eaaa85c8617.jpg",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus, arcu at sollicitudin pellentesque, mauris enim semper lectus, non ullamcorper velit arcu non velit. Donec eget felis sed neque gravida pulvinar. Nulla facilisi.",
-    categories: ["Category 1", "Category 2"],
-  },
-  {
-    imgSrc: "../../../LoginAssets/[GetPaidStock.com]-67eaaadc6e4d5.jpg",
+    imgSrc: iconImages.image1,
     title: "Lorem: Lorem Ipsum Dolor",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus, arcu at sollicitudin pellentesque, mauris enim semper lectus, non ullamcorper velit arcu non velit. Donec eget felis sed neque gravida pulvinar. Nulla facilisi.",
     categories: ["Category 1", "Category 2"],
   },
   {
-    imgSrc: "../../../LoginAssets/[GetPaidStock.com]-67eaaba7c7b2b.jpg",
+    imgSrc: iconImages.image2,
     title: "Lorem: Lorem Ipsum Dolor",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus, arcu at sollicitudin pellentesque, mauris enim semper lectus, non ullamcorper velit arcu non velit. Donec eget felis sed neque gravida pulvinar. Nulla facilisi.",
     categories: ["Category 1", "Category 2"],
   },
   {
-    imgSrc: "../../../LoginAssets/[GetPaidStock.com]-67eabbf4cf3ed.jpg",
+    imgSrc: iconImages.image3,
     title: "Lorem: Lorem Ipsum Dolor",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus, arcu at sollicitudin pellentesque, mauris enim semper lectus, non ullamcorper velit arcu non velit. Donec eget felis sed neque gravida pulvinar. Nulla facilisi.",
     categories: ["Category 1", "Category 2"],
   },
   {
-    imgSrc: "../../../LoginAssets/[GetPaidStock.com]-67eabc28249e0.jpg",
+    imgSrc: iconImages.image4,
+    title: "Lorem: Lorem Ipsum Dolor",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus, arcu at sollicitudin pellentesque, mauris enim semper lectus, non ullamcorper velit arcu non velit. Donec eget felis sed neque gravida pulvinar. Nulla facilisi.",
+    categories: ["Category 1", "Category 2"],
+  },
+  {
+    imgSrc: iconImages.image5,
     title: "Lorem: Lorem Ipsum Dolor",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus, arcu at sollicitudin pellentesque, mauris enim semper lectus, non ullamcorper velit arcu non velit. Donec eget felis sed neque gravida pulvinar. Nulla facilisi.",

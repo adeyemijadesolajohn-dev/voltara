@@ -2,7 +2,7 @@ import "./App.scss";
 import Dashboard from "./DashboardMain/DashboardApp";
 import Login from "./DashboardMain/Pages/Login/Login";
 import Register from "./DashboardMain/Pages/Register/Register";
-import LandingPage from "./Components/Landing Page/LandingPage";
+import LandingPage from "./DashboardMain/Pages/LandingPage/Landing";
 import SelectDashboard from "./DashboardMain/Pages/SelectDashboard/SelectDashboard";
 import CustomerRegistration from "./DashboardMain/Pages/CustomerRegistration/CustomerRegistration";
 import { createBrowserRouter, RouterProvider } from "react-router";
@@ -17,7 +17,7 @@ import Meter from "./DashboardMain/Pages/Meter/Meter";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/Login",
     element: (
       <div>
         <Login />
@@ -81,7 +81,7 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "/LandingPage",
+    path: "/",
     element: (
       <div>
         <LandingPage />

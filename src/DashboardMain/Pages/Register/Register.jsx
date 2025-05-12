@@ -27,7 +27,7 @@ const Register = () => {
 
         <div className="flex formDiv">
           <div className="headerDiv">
-            <Link to="/LandingPage">
+            <Link to="/">
               <div className="logo">
                 <img src={logo} alt="logo" />
                 <h4>Voltara</h4>
@@ -173,7 +173,7 @@ const Register = () => {
 
             <div className="registerLinkDiv">
               <span className="text">Already have an account? </span>
-              <Link to="/">
+              <Link to="/Login">
                 <span className="signUp link">Log In</span>
               </Link>
             </div>

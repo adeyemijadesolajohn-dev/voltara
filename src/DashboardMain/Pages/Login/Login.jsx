@@ -26,7 +26,7 @@ const Login = () => {
 
         <div className="flex formDiv">
           <div className="headerDiv">
-            <Link to="/LandingPage">
+            <Link to="/">
               <div className="logo">
                 <img src={logo} alt="logo" />
                 <h4>Voltara</h4>
