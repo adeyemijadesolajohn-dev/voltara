@@ -1,9 +1,9 @@
 import React from "react";
 import $ from "jquery";
 import "./CustomerRegistration.scss";
-import "../../../../App.scss";
-import loginBG from "../../../../LoginAssets/Login placeholder BG.png";
-import clientLogo from "../../../../LoginAssets/pngegg.png";
+import "../../../App.scss";
+import loginBG from "../../../LoginAssets/Login placeholder BG.png";
+import clientLogo from "../../../LoginAssets/pngegg.png";
 import { Link } from "react-router";
 import {
   FaRegUser,
@@ -22,9 +22,7 @@ import { FaHouseUser } from "react-icons/fa";
 import { ImCheckmark2 } from "react-icons/im";
 import { LuMapPinHouse } from "react-icons/lu";
 import { MdOutlineAttachEmail } from "react-icons/md";
-import checkMark from "../../../../LoginAssets/green-tick.gif";
-// import { PiUpload } from "react-icons/pi";
-// import customerDP from "../../../../LoginAssets/vecteezy_user-icon-on-transparent-background_19879198.png";
+import checkMark from "../../../LoginAssets/green-tick.gif";
 
 var next_click = document.querySelectorAll(".nextButton");
 var main_form = document.querySelectorAll(".main");
@@ -147,29 +145,6 @@ const CustomerRegistration = () => {
                 <h4>Company Name</h4>
               </div>
             </Link>
-            {/* <div className="profilePicture">
-              <img src={customerDP} alt="Profile" className="logo" />
-              <div className="profileText">
-                <h2>User Photo</h2>
-                <p>Upload your profile photo here</p>
-              </div>
-              <div className="userCard">
-                <div className="card">
-                  <div className="dropBox">
-                    <header>
-                      <h4>Select File here</h4>
-                    </header>
-                    <p>Files Supported: jpg, jpeg, png</p>
-                    <div type="button" className="btn">
-                      <span>
-                        <input type="file" accept=".jpg, .jpeg, .png" />
-                        <PiUpload className="icon" />
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div> */}
           </div>
 
           <div className="grid main active">
@@ -277,23 +252,6 @@ const CustomerRegistration = () => {
                 </div>
               </div>
 
-              {/* <div className="inputText">
-              <div className="flex inputDiv">
-                <GiPassport className="icon" />
-                <input
-                  type="file"
-                  id="inputField userCard"
-                  placeholder="Files Supported: PDF, TEXT, DOC, DOCX, JPG, JPEG, PNG"
-                  aria-placeholder="Passport ID"
-                  accepted=".doc, .docx, .pdf, .jpg, .jpeg, .png"
-                  required
-                />
-                <label htmlFor="Passport ID">
-                  Upload your Passport ID here
-                </label>
-              </div>
-            </div> */}
-
               <div className="inputText">
                 <div className="flex inputDiv">
                   <FaRegIdCard className="icon" />
@@ -307,23 +265,6 @@ const CustomerRegistration = () => {
                   <label htmlFor="Address">Driver's License Number</label>
                 </div>
               </div>
-
-              {/* <div className="inputText">
-              <div className="flex inputDiv">
-                <GiPassport className="icon" />
-                <input
-                  type="file"
-                  id="inputField userCard"
-                  placeholder="Files Supported: PDF, TEXT, DOC, DOCX, JPG, JPEG, PNG"
-                  aria-placeholder="Driver's License"
-                  accepted=".doc, .docx, .pdf, .jpg, .jpeg, .png"
-                  required
-                />
-                <label htmlFor="Driver's License">
-                  Upload your Driver's License here
-                </label>
-              </div>
-            </div> */}
 
               <div className="inputText">
                 <div className="flex inputDiv">
@@ -340,21 +281,6 @@ const CustomerRegistration = () => {
                   </label>
                 </div>
               </div>
-
-              {/* <div className="inputText">
-              <div className="flex inputDiv">
-                <GiPassport className="icon" />
-                <input
-                  type="file"
-                  id="inputField userCard"
-                  placeholder="Files Supported: PDF, TEXT, DOC, DOCX, JPG, JPEG, PNG"
-                  aria-placeholder="NIN"
-                  accepted=".doc, .docx, .pdf, .jpg, .jpeg, .png"
-                  required
-                />
-                <label htmlFor="NIN">Upload your NIN here</label>
-              </div>
-            </div> */}
 
               <div className="progressBtns">
                 <div className="prevNext">
@@ -557,11 +483,6 @@ const CustomerRegistration = () => {
                     r="25"
                     fill="none"
                   />
-                  {/* <path
-                    className="checkmark__check"
-                    fill="none"
-                    d="M14.1 27.217.1 7.2 16.7-16.8"
-                  /> */}
                 </svg>
 
                 <img src={checkMark} alt="checkMark" />
@@ -575,13 +496,16 @@ const CustomerRegistration = () => {
                 </p>
               </div>
 
-              <div type="button" className="btn">
-                <button></button>
-                <span>
-                  <p>Finish</p>
-                  <ImCheckmark2 className="icon" />
-                </span>
-              </div>
+              <Link to="/SelectDashboard">
+                {" "}
+                <div type="button" className="btn">
+                  <button></button>
+                  <span>
+                    <p>Finish</p>
+                    <ImCheckmark2 className="icon" />
+                  </span>
+                </div>
+              </Link>
             </div>
           </div>
         </div>

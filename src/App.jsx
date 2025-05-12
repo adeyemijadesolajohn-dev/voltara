@@ -4,7 +4,7 @@ import Login from "./Components/Login/Login";
 import Register from "./Components/Register/Register";
 import LandingPage from "./Components/Landing Page/LandingPage";
 import SelectDashboard from "./Components/Dashboard/Select Dashboard/SelectDashboard";
-import CustomerRegistration from "./Components/Dashboard/Select Dashboard/CustomerRegistration/CustomerRegistration";
+import CustomerRegistration from "./DashboardMain/Pages/CustomerRegistration/CustomerRegistration";
 import { createBrowserRouter, RouterProvider } from "react-router";
 import ElectricBill from "./Components/Dashboard/Select Dashboard/ElectricBill/ElectricBill";
 import DebitSummary from "./Components/Dashboard/Select Dashboard/ElectricBill/DebitSummary";

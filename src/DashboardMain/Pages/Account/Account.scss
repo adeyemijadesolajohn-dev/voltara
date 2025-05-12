@@ -20,14 +20,12 @@
       border: 3.5px inset whitesmoke;
       padding-inline: 22px;
       padding-block: -22px;
-      //   margin-left: 20px;
 
       .accountLogoImg {
         img {
           height: 55px;
           width: 55px;
           object-fit: contain;
-          // padding-bottom: 0.5rem;
           transition: 0.35s ease-in-out;
         }
       }

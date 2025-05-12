@@ -338,7 +338,7 @@ video {
 .loginPage,
 .registerPage,
 .customerRegistrationPage {
-  // min-height: 100vh;
+  min-height: 100vh;
   width: 100vw;
   margin: auto;
   overflow: hidden;
@@ -350,7 +350,7 @@ video {
   transition: 0.35s ease-in-out;
 
   .container {
-    // height: 100vh;
+    height: 100vh;
     width: 100%;
     margin: auto;
     overflow: hidden;
