@@ -10,8 +10,6 @@ import Slider from "./LandingPageSlider/LandingPageSlider";
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoMail, IoLogoWechat, IoLogoSkype } from "react-icons/io5";
 import { IoIosArrowDown } from "react-icons/io";
-// import "../../LoginAssets";
-// import { motion } from "framer-motion";
 
 const LandingPage = () => {
   return (
@@ -83,16 +81,6 @@ const LandingPage = () => {
       </nav>
 
       <div className="largeStatement">
-        {/* <motion.h1
-          className="statement"
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-        >
-          Streamline Customer & Account Management with Our Powerful Enterprise
-          Solution
-        </motion.h1> */}
-
         <h1 className="statement">
           Streamline Customer & Account Management with Our Powerful Enterprise
           Solution

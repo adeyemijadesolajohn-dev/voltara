@@ -1,7 +1,7 @@
 import "./App.scss";
 import Dashboard from "./DashboardMain/DashboardApp";
-import Login from "./Components/Login/Login";
-import Register from "./Components/Register/Register";
+import Login from "./DashboardMain/Pages/Login/Login";
+import Register from "./DashboardMain/Pages/Register/Register";
 import LandingPage from "./Components/Landing Page/LandingPage";
 import SelectDashboard from "./DashboardMain/Pages/SelectDashboard/SelectDashboard";
 import CustomerRegistration from "./DashboardMain/Pages/CustomerRegistration/CustomerRegistration";
