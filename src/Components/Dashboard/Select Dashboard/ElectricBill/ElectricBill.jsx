@@ -1,7 +1,7 @@
 import React from "react";
 import $ from "jquery";
 import "./ElectricBill.scss";
-import "../../../../App.css";
+import "../../../../App.scss";
 import loginBG from "../../../../LoginAssets/Login placeholder BG.png";
 import clientLogo from "../../../../LoginAssets/pngegg.png";
 import mastercard from "../../../../LoginAssets/pngimg.com - mastercard_PNG16.png";

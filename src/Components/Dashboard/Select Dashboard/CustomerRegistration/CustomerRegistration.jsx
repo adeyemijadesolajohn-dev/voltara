@@ -1,7 +1,7 @@
 import React from "react";
 import $ from "jquery";
 import "./CustomerRegistration.scss";
-import "../../../../App.css";
+import "../../../../App.scss";
 import loginBG from "../../../../LoginAssets/Login placeholder BG.png";
 import clientLogo from "../../../../LoginAssets/pngegg.png";
 import { Link } from "react-router";

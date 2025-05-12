@@ -62,7 +62,7 @@ import {
   RiHome9Line as homeIcon,
   RiDonutChartFill as donutChartIcon,
 } from "react-icons/ri";
-import { FaGears as gearIcon } from "react-icons/fa6";
+import { FaGears as gearIcon, FaXmark as closeIcon } from "react-icons/fa6";
 import {
   BsMenuButtonWideFill as menuIcon,
   BsFillPersonLinesFill as clientProfileIcon,
@@ -83,7 +83,10 @@ import {
   GiElectric as voltageIcon,
 } from "react-icons/gi";
 import { LuLayoutDashboard as overviewIcon } from "react-icons/lu";
-import { ImUsers as partnerIcon, ImPowerCord as powerUsageIcon } from "react-icons/im";
+import {
+  ImUsers as partnerIcon,
+  ImPowerCord as powerUsageIcon,
+} from "react-icons/im";
 import { IoMdAnalytics as analysisIcon } from "react-icons/io";
 
 export const iconImgs = {
@@ -161,5 +164,6 @@ export const iconIcon = {
   statusIcon,
   nairaIcon,
   billsIcon,
-powerUsageIcon,
+  powerUsageIcon,
+  closeIcon,
 };

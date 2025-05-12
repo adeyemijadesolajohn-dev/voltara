@@ -1,9 +1,11 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import "./Navbar.scss";
+import Model from "react-modal";
 import { SidebarContext } from "../Sidebar/SidebarContext";
 import { iconIcon } from "../../../LoginAssets/LoginAssets";
 import { IoIosArrowDown } from "react-icons/io";
 import { MdPersonSearch } from "react-icons/md";
+import CreateAccount from "../CreateAccount/CreateAccount";
 
 const Navbar = () => {
   const { toggleSidebar } = useContext(SidebarContext);
@@ -14,6 +16,9 @@ const Navbar = () => {
       toggleSidebar();
     }
   };
+
+  const [visible, setVisible] = useState(false);
+
   return (
     <div className="mainContentTop">
       <div className="contentTopLeft">
@@ -39,12 +44,29 @@ const Navbar = () => {
 
       <div className="contentTopMenu">
         <ul className="menuBar">
-          <li>
-            <a href="#">Create Account</a>
-            <div className="chevronDown">
-              <IoIosArrowDown className="arrowDown" />
-            </div>
+          <li onClick={() => setVisible(true)}>
+            <a>Create Account</a>
           </li>
+          <Model
+            className="modal"
+            isOpen={visible}
+            style={{
+              overlay: { backgroundColor: "rgba(0, 0, 0, 0.7)" },
+              content: { width: "800px" },
+            }}
+          >
+            <div className="formHeadingDiv">
+              <div className="formHeading">
+                <h1>Create Account</h1>
+              </div>
+
+              <div className="closeIcon" onClick={() => setVisible(false)}>
+                <iconIcon.closeIcon />
+              </div>
+            </div>
+            <CreateAccount />
+          </Model>
+
           <li>
             <a href="#">Edit Account</a>
             <div className="chevronDown">
@@ -88,20 +110,6 @@ const Navbar = () => {
             <div class="search__close"></div>
           </div>
         </div>
-
-        {/* <div
-          type="button"
-          role="button"
-          tabIndex={0}
-          aria-pressed="false"
-          className="notificationBtn contentTopBtn"
-        >
-          <button></button>
-          <span>
-            <iconIcon.bellIcon className="bellIcon" />
-            <span className="notificationBtnDot"></span>
-          </span>
-        </div> */}
       </div>
     </div>
   );

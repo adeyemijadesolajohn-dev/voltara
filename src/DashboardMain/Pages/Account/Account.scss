@@ -183,3 +183,71 @@
     }
   }
 }
+
+.formHeadingDiv {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-block: 20px;
+  margin-bottom: 35px;
+
+  .formHeading {
+    h1 {
+      font-size: 22px;
+      font-weight: bolder;
+      transition: 0.35s ease-in-out;
+      color: var(--whiteColor);
+    }
+  }
+
+  .closeIcon {
+    height: 35px;
+    width: 35px;
+    font-size: 35px;
+    font-weight: 1000;
+    color: var(--whiteColor);
+    cursor: pointer;
+    transition: 0.35s ease-in-out;
+
+    :hover {
+      color: red;
+      animation-name: spin;
+      animation-duration: 5000ms;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      transform-origin: center center;
+
+      @keyframes spin {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    }
+  }
+}
+
+.modal {
+  height: 80vh;
+  width: auto;
+  margin: 55px auto 0;
+  border: 2px outset var(--secondaryColor);
+  border-radius: 35px;
+  padding: 0px 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(7px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.35);
+  transition: 0.35s ease-in-out;
+  background: radial-gradient(
+    circle farthest-side,
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.35)
+  );
+  background-repeat: no-repeat;
+}

@@ -8,7 +8,7 @@ import CustomerRegistration from "./Components/Dashboard/Select Dashboard/Custom
 import { createBrowserRouter, RouterProvider } from "react-router";
 import ElectricBill from "./Components/Dashboard/Select Dashboard/ElectricBill/ElectricBill";
 import DebitSummary from "./Components/Dashboard/Select Dashboard/ElectricBill/DebitSummary";
-import CreateAccount from "./Components/Dashboard/Select Dashboard/CreateAccount/CreateAccount";
+import CreateAccount from "./DashboardMain/Components/CreateAccount/CreateAccount";
 import Account from "./DashboardMain/Pages/Account/Account";
 import BillPay from "./DashboardMain/Pages/BillPay/BillPay";
 import Partner from "./DashboardMain/Pages/Partner/Partner";
