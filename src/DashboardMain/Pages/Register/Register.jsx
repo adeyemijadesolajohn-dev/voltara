@@ -164,10 +164,12 @@ const Register = () => {
               </label>
             </div>
 
-            <div type="submit" className="btn">
-              <button></button>
-              <span>Sign Up</span>
-            </div>
+            <Link to="/SelectDashboard">
+              <div type="submit" className="btn">
+                <button></button>
+                <span>Sign Up</span>
+              </div>
+            </Link>
 
             <div className="registerLinkDiv">
               <span className="text">Already have an account? </span>

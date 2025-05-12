@@ -107,10 +107,12 @@ const Login = () => {
               </a>
             </div>
 
-            <div type="submit" className="btn">
-              <button></button>
-              <span>Log In</span>
-            </div>
+            <Link to="/SelectDashboard">
+              <div type="submit" className="btn">
+                <button></button>
+                <span>Log In</span>
+              </div>
+            </Link>
 
             <div className="registerLinkDiv">
               <span className="text">Don't have an account? </span>
