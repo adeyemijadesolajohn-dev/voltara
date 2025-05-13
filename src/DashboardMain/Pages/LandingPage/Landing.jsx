@@ -1,6 +1,7 @@
 import React from "react";
 import "./Landing.scss";
 import "../../../App.scss";
+import Slider from "../../Components/LandingPageSlider/ImageSlider";
 import navLogo from "../../../LoginAssets/voltara placeholder logo.png";
 import { iconImgs } from "../../../LoginAssets/LoginAssets";
 import { Link } from "react-router";
@@ -92,6 +93,8 @@ const Landing = () => {
             Enterprise Solution
           </h1>
         </div>
+
+        <Slider />
 
         <footer className="footer">
           <div className="footerContainer">
