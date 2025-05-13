@@ -1,7 +1,7 @@
 import React from "react";
 import "./Landing.scss";
 import "../../../App.scss";
-import Slider from "../../Components/LandingPageSlider/ImageSlider";
+import Slider from "../../Components/LandingPageSlider/Slider";
 import navLogo from "../../../LoginAssets/voltara placeholder logo.png";
 import { iconImgs } from "../../../LoginAssets/LoginAssets";
 import { Link } from "react-router";
